@@ -1,9 +1,11 @@
+# make sure brew is up to date
+brew update
+
 # Taps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
-tap 'homebrew/dupes'
 tap 'homebrew/php'
 
 # Install ZSH
@@ -34,13 +36,22 @@ brew 'trash'
 brew 'wget'
 
 # Development
-# brew 'php71'
-# brew 'php71-intl'
-# brew 'php71-imagick'
+brew 'php71'
+brew 'php71-intl'
+brew 'php71-imagick'
+brew 'mcrypt'
+brew 'php71-mcrypt'
+brew 'composer' # Remember to update $PATH in .zshrc
+# export PATH="$HOME/.npm-packages/bin:$(brew --prefix homebrew/php/php70)/bin:$PATH"
 # brew 'mariadb'
 
 # Apps
 cask 'alfred'
+cask 'iterm2'
+cask 'slack'
+cask 'sublime-text'
+cask 'mac2imgur'
+cask 'Caskroom/cask/karabiner-elements'
 # cask 'caffeine'
 # cask 'docker'
 # cask 'firefox'
@@ -48,7 +59,6 @@ cask 'alfred'
 # cask 'google-chrome'
 # cask 'gpgtools'
 # cask 'insomnia'
-cask 'iterm2'
 # cask 'java'
 # cask 'mysqlworkbench'
 # cask 'now'
@@ -56,8 +66,6 @@ cask 'iterm2'
 # cask 'quip'
 # cask 'sequel-pro'
 # cask 'shuttle' # http://fitztrev.github.io/shuttle/
-cask 'slack'
-cask 'sublime-text'
 # cask 'torbrowser'
 # cask 'tower'
 # cask 'transmit'
@@ -65,8 +73,7 @@ cask 'sublime-text'
 # cask 'virtualbox'
 # cask 'virtualbox-extension-pack'
 # cask 'vlc'
-cask 'mac2imgur'
-brew cask 'Caskroom/cask/karabiner-elements'
+
 # Quicklook
 cask 'qlcolorcode'
 cask 'qlmarkdown'
