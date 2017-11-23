@@ -1,28 +1,28 @@
 # make sure brew is up to date
-brew update
+#brew update
 
 # Taps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
-tap 'homebrew/php'
+# tap 'homebrew/php'
 
 # Install ZSH
 brew 'zsh'
 brew 'zsh-completions'
 
 # Install GNU core utilities (those that come with macOS are outdated)
-brew 'coreutils'
+# brew 'coreutils'
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew 'findutils'
+# brew 'findutils'
 
 # Install Bash 4
-brew 'bash'
+# brew 'bash'
 
 # Install more recent versions of some macOS tools
-brew 'grep'
+# brew 'grep'
 
 # Install Binaries
 # brew 'awscli'
@@ -33,15 +33,15 @@ brew 'tree'
 # brew 'mas'
 brew 'node'
 brew 'trash'
-brew 'wget'
+# brew 'wget'
 
 # Development
-brew 'php71'
-brew 'php71-intl'
-brew 'php71-imagick'
-brew 'mcrypt'
-brew 'php71-mcrypt'
-brew 'composer' # Remember to update $PATH in .zshrc
+# brew 'php71'
+# brew 'php71-intl'
+# brew 'php71-imagick'
+# brew 'mcrypt'
+# brew 'php71-mcrypt'
+# brew 'composer' # Remember to update $PATH in .zshrc
 # export PATH="$HOME/.npm-packages/bin:$(brew --prefix homebrew/php/php70)/bin:$PATH"
 # brew 'mariadb'
 
@@ -50,8 +50,8 @@ cask 'alfred'
 cask 'iterm2'
 cask 'slack'
 cask 'sublime-text'
-cask 'mac2imgur'
-cask 'Caskroom/cask/karabiner-elements'
+# cask 'mac2imgur'
+# cask 'Caskroom/cask/karabiner-elements'
 # cask 'caffeine'
 # cask 'docker'
 # cask 'firefox'
@@ -75,17 +75,17 @@ cask 'Caskroom/cask/karabiner-elements'
 # cask 'vlc'
 
 # Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
+# cask 'qlcolorcode'
+# cask 'qlmarkdown'
+# cask 'quicklook-json'
+# cask 'quicklook-csv'
+# cask 'qlstephen'
 
 # Fonts
 cask 'font-source-code-pro-for-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+# cask 'font-source-code-pro'
+# cask 'font-source-sans-pro'
+# cask 'font-source-serif-pro'
 cask 'font-fira-code'
 
 # Install Mac App Store apps
