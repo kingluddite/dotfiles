@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cobalt2"
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -63,6 +63,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
+# z
+. ~/z.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -231,3 +233,6 @@ alias zfrash='source ~/.zshrc'
 # Key Bindings
 bindkey '^u' autosuggest-accept
 bindkey '`' autosuggest-accept
+
+
+source "/Users/student/.oh-my-zsh/custom/themes/spaceship.zsh-theme"

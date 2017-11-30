@@ -11,6 +11,7 @@ tap 'homebrew/bundle'
 # Install ZSH
 brew 'zsh'
 brew 'zsh-completions'
+brew 'zsh-autosuggestions'
 
 # Install GNU core utilities (those that come with macOS are outdated)
 # brew 'coreutils'
@@ -27,12 +28,12 @@ brew 'zsh-completions'
 # Install Binaries
 # brew 'awscli'
 brew 'git'
-brew 'hub'
+# brew 'hub'
 brew 'tree'
 # brew 'mackup'
 # brew 'mas'
 brew 'node'
-brew 'trash'
+# brew 'trash'
 # brew 'wget'
 
 # Development
@@ -48,11 +49,13 @@ brew 'trash'
 # Apps
 cask 'alfred'
 cask 'iterm2'
-cask 'slack'
+# cask 'slack'
 cask 'sublime-text'
 # cask 'mac2imgur'
 # cask 'Caskroom/cask/karabiner-elements'
 # cask 'caffeine'
+cask 'dropbox'
+cask 'spectacle'
 # cask 'docker'
 # cask 'firefox'
 # cask 'google-backup-and-sync'
