@@ -47,7 +47,7 @@
     - Open the vimrc file with `$ vim vimrc`
     - Install plugins with `:PluginInstall`
     - Close and reopen iTerm
-
+  
 ## Run apps
 * Alfred App (open using Spotlight with `cmd` + `spacebar`)
   - Open Preferences
