@@ -17,6 +17,13 @@ brew bundle
 # Make ZSH the default shell environment
 chsh -s $(which zsh)
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+TEMP_PATH_FOR_THEME=/tmp/spaceship-theme
+rm -rf $TEMP_PATH_FOR_THEME
+mkdir $TEMP_PATH_FOR_THEME
+npm install -g spaceship-zsh-theme
+
 # Install Composer
 # curl -sS https://getcomposer.org/installer | php
 # mv composer.phar /usr/local/bin/composer

@@ -355,7 +355,7 @@ cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ 
 ###############################################################################
 
 # Set up my preferred keyboard shortcuts
-cp -r init/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
+cp "$HOME/init/Shortcuts.json" "$HOME/Library/Application Support/Spectacle/Shortcuts.json"
 
 ###############################################################################
 # Kill affected applications                                                  #
