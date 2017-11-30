@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'prettier/prettier'
+Plugin 'jnurmine/zenburn'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'sirver/ultisnips'
 Plugin 'tpope/vim-surround'
@@ -267,6 +268,9 @@ set background=dark
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
 " colorscheme solarized
+" my theme
+syntax on
+colors zenburn
 
 " iterm cursor changes depending on mode
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"

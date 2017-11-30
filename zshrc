@@ -236,3 +236,6 @@ bindkey '`' autosuggest-accept
 
 
 source "/Users/student/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/student/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
