@@ -692,11 +692,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1570 619 597 208 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>337 769 796 473 0 0 2560 1417 </string>
+	<string>337 862 796 473 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>280 656 905 552 0 0 2560 1417 </string>
+	<string>280 676 745 527 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>343 181 905 552 0 0 2560 1417 </string>
+	<string>329 237 718 467 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>364 158 905 552 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -2032,6 +2032,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.1.5.beta.2</string>
+	<string>3.1.5</string>
 </dict>
 </plist>

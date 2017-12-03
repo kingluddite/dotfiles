@@ -1,59 +1,73 @@
 # Instructions
-1. git clone dotfiles repo to your $HOME (~) directory (5 seconds)
-2. install xcode tools - `$ xcode-select --install` (approx 5min)
+## Clone the repo to $HOME
+* It is **important** you install the dotfiles in your $HOME directory
+* `$ git clone https://github.com/kingluddite/dotfiles.git`
 
-**notes**
+## Intall xcode tools
+* Just to be safe
+* If you didn't install xcode you'll have to do this all over again
+* Most likely this will already be installed but it doesn't hurt
+* `$ xcode-select --install`
 
-* Make sure you do the **xcode first**
-* Save dotfiles to $HOME
+## Run the install file
+* `$ ./install.sh`
+* This will install homebrew and cask
+* This will install all your Mac OS defaults (.macos)
+* This will install brew bundle
+* This will install your selected apps in Brew.sh
+    - Comment in or out apps (comments are `#`) that you want or don't want
+* This installs Sublime Text
+    - Once your aliases are set up you can open Sublime Text with `sop`
+* This installs the zsh shell and makes it the default
+* All the aliases I like to use are in the `aliases` file
+    - Fork my repo and make the aliases fit your workflow
+* I have a function tied to an alias to start a gulp boilerplate project
 
-3. Run the install file
-* `$ ./install.sh` (This will do a bulk of the work)
-  * This will install homebrew and cask
-  * This will install all your macos defaults
-  * fix the iterm settings to have the correct path to plist file
-  * install brew bundle and install your selected apps in Brew.sh (comment in or add new apps (comments in these files are `#`) or comment out apps you don't want)
-  * This installs sublime with a `subl` command line shortcut
-  * This installs the zsh shell and oh-my-zsh and the spaceship theme for this shell
-  * All the aliases I like to use are in the `aliases` file
-  * I have a function tied to an alias to start a gulp boilerplate project
+## Install oh-my-zsh
+`$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
-4. Refresh zshrc with ``
-
-4. Symlinks
-*  `$ ./makesymlinks.sh` (inside `dotfiles`) installs all your symlinks
-  -  You will see if you view in home directory `$ ls -la` and you'll see all the usual config dotfiles like `.vimrc` and `.zshrc` and now they have symlinks pointing to the dotfiles directory
-  -  I organize it this way because it helps add config to github so adding this config to new machines takes minutes instead of hours
-  -  Try out one of my aliases with `$ dotf` and you should be taken to `~/dotfiles`
+## Add Symlinks
+*  `$ ./makesymlinks.sh` (make sure you are inside the `dotfiles` directory when you run this)
+  -  You will see if you view $HOME with `$ ls -la` and you'll see all the usual config dotfiles like `.vimrc` and `.zshrc` and now they have symlinks pointing to the `dotfiles` directory
+  -  Try out two of my aliases to see if it is working
+  -  `$ desk` - Takes you to the `Desktop`
+  -  `$ dotf` - Takes you to the `dotfiles` directory
 
 ## Setup Iterm
-* This will add my iterm2 Preferences
+* This will add my iTerm2 Preferences
+
+### Remove Existing iTerm2 settings
 * You first remove the existing iterm preferences with:
     - `$ rm ~/Library/Preferences/com.googlecode.iterm2.plist`
-* Then you create a symlink to where the iterm2 preferences should be from the dotfiles iterm2 preferences (this will save you from having to make all the iterm2 config changes)
-* The solarize light color scheme (if you are on a projector)
-* You can make changes to this plist file and just replace the existing plist file with the file your create to fit your custom needs
+
+### Create a symlink from dotfiles to the iTerm2 spot for iTerm2 preferences 
+* This will save you from having to make all the iterm2 config changes)
+* Change to the `solarize light` color scheme (if you are on a projector) otherwise `solarize dark` is chosen by default
+* Here is the symlink that adds my iTerm2 preferences to your iTerm2
     - `$ ln -s ~/dotfiles/init/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist`
 
 ### The prompt I like to use for zsh (web bos cobalt2)
   - Follow these instructions:
-    + Make a new folder for custom oh-my-zsh themes
-      * `$ mkdir oh-my-zsh/custom/themes/`
-    + Move the cobalt zsh theme to the proper folder
-      * `$ cp -R init/cobalt2.zsh-theme oh-my-zsh/themes/custom`
-    + Change the theme in `$HOME/dotfiles/zshrc` to: `ZSH_THEME=”cobalt2"`
+    + Move the **cobalt zsh theme** to the proper folder
+      * `$ cp -R init/cobalt2.zsh-theme oh-my-zsh/themes`
     + Import the cobalt2 color scheme into iTerm2 using Preferences > Profile > Colors and point to `$HOME/dotfiles/init/cobalt2.itermcolors`
-    + The following are for the special font installations
-    + Install pip with `$ sudo easy_install pip`
-    + `$ cd ~/Desktop` then `$ git clone https://github.com/powerline/fonts`
-    + `$ cd ~/Desktop/fonts`
-    + `$ ./install.sh`
-    + `$ rm -rf ~/Desktop/fonts`
-    + Make the fonts look like this
-    + Comment out this line in .zshrc so spaceship won't be the default font
-    + `# source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"`
+
+#### The following are for the special font installations
+##### Install pip
+* `$ sudo easy_install pip`
+
+##### Install powerline fonts
+* `$ cd ~/Desktop` then `$ git clone https://github.com/powerline/fonts`
+* `$ cd ~/Desktop/fonts`
+* `$ ./install.sh`
+* `$ rm -rf ~/Desktop/fonts` (clean up after yourself :) )
+* Make the iTerm2 font settins look like this
 
 ![fonts settings iterm](https://i.imgur.com/8zLlEfZ.png)
+
+* Comment out this line in .zshrc so spaceship won't be the default font
+* `# source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"`
+
 
 ### [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) Syntax
 * This lets you know if you are typing a valid command (green)
