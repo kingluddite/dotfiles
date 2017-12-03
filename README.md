@@ -4,14 +4,8 @@
 
 **notes**
 
-* Make sure you do the xcode first**
+* Make sure you do the **xcode first**
 * Save dotfiles to $HOME
-
-## Troubleshooting Tips
-* If you run into file permission errors, give file execute permission `chmod 775 install.sh`
-* If you have to add users to sudoers [follow these instructions](http://osxdaily.com/2014/02/06/add-user-sudoers-file-mac/)
-* If you get a bunch of homebrew permission errors use this command `$ sudo chown -R $(whoami) $(brew --prefix)` (is the how todo it in High Sierra)
-* You may need to install the latest vim using: `$ brew install vim --override-system-vi`
 
 3. Run the install file
 * `$ ./install.sh` (This will do a bulk of the work)
@@ -21,7 +15,8 @@
   * install brew bundle and install your selected apps in Brew.sh (comment in or add new apps (comments in these files are `#`) or comment out apps you don't want)
   * This installs sublime with a `subl` command line shortcut
   * This installs the zsh shell and oh-my-zsh and the spaceship theme for this shell
-  * All the aliases I like to use
+  * All the aliases I like to use are in the `aliases` file
+  * I have a function tied to an alias to start a gulp boilerplate project
 
 4. Symlinks
 *  `$ ./makesymlinks.sh` (inside `dotfiles`) installs all your symlinks
@@ -30,7 +25,7 @@
 *  might have to manually install package control and restart sublime text
 
 ## Setup Iterm
-* This will add my iterm2 preferences
+* This will add my iterm2 Preferences
 * You first remove the existing iterm preferences with:
     - `$ rm ~/Library/Preferences/com.googlecode.iterm2.plist`
 * Then you create a symlink to where the iterm2 preferences should be from the dotfiles iterm2 preferences (this will save you from having to make all the iterm2 config changes)
@@ -85,6 +80,19 @@
     + Change hot key to `ctrl` + `spacebar`
     + Under features > Extras check Folders, Archives, Images, Text Files Documents
 * Open Spectacle using Alfred and update keyboard shortcuts in preferences
+  - I like using `ctrl` + `alt` + `cmd` as my 3 trigger keys
+    + Then the 4 hours to move the window top, right, bottom left
+    + The 3 triggers and spacebar for full screen
+    + I use `[` and `]` and 3 trigger keys for **top left** and **top right**
+    + I use `;` and `'` and 3 trigger keys for **bottom left** and **bottom right**
+    + There is a way to automatically push the spectacle config to macos but just haven't figured it out yet (Stay tuned! or Pull Request the solution)
+
+## Troubleshooting Tips
+* If you run into file permission errors, give file execute permission `chmod 775 install.sh`
+* If you have to add users to sudoers [follow these instructions](http://osxdaily.com/2014/02/06/add-user-sudoers-file-mac/)
+  - If you are setting up a new user on your mac, you will need to do this
+* If you get a bunch of homebrew permission errors use this command `$ sudo chown -R $(whoami) $(brew --prefix)` (is the how todo it in High Sierra)
+* You may need to install the **latest vim** using: `$ brew install vim --override-system-vi`
 
 
 
