@@ -25,9 +25,11 @@
 * I have a function tied to an alias to start a gulp boilerplate project
 
 ## Install oh-my-zsh
+`$ cd` (go back to $HOME)
 `$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 ## Add Symlinks
+* `$ cd dotfiles`
 *  `$ ./makesymlinks.sh` (make sure you are inside the `dotfiles` directory when you run this)
   -  You will see if you view $HOME with `$ ls -la` and you'll see all the usual config dotfiles like `.vimrc` and `.zshrc` and now they have symlinks pointing to the `dotfiles` directory
   -  Try out two of my aliases to see if it is working
@@ -50,7 +52,7 @@
 ### The prompt I like to use for zsh (web bos cobalt2)
   - Follow these instructions:
     + Move the **cobalt zsh theme** to the proper folder
-      * `$ cp -R init/cobalt2.zsh-theme oh-my-zsh/themes`
+      * `$ cp -R init/cobalt2.zsh-theme ~/.oh-my-zsh/themes`
     + Import the cobalt2 color scheme into iTerm2 using Preferences > Profile > Colors and point to `$HOME/dotfiles/init/cobalt2.itermcolors`
 
 #### The following are for the special font installations
