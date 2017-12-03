@@ -18,11 +18,11 @@ brew bundle
 chsh -s $(which zsh)
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-TEMP_PATH_FOR_THEME=/tmp/spaceship-theme
-rm -rf $TEMP_PATH_FOR_THEME
-mkdir $TEMP_PATH_FOR_THEME
-npm install -g spaceship-zsh-theme
+# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# TEMP_PATH_FOR_THEME=/tmp/spaceship-theme
+# rm -rf $TEMP_PATH_FOR_THEME
+# mkdir $TEMP_PATH_FOR_THEME
+# npm install -g spaceship-zsh-theme
 
 # Install Composer
 # curl -sS https://getcomposer.org/installer | php
