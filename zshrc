@@ -7,9 +7,9 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="cobalt2"
 # SPACESHIP_PROMPT_SYMBOL=">"
-SPACESHIP_PACKAGE_SHOW=false
-SPACESHIP_BATTERY_SHOW=false
-SPACESHIP_BATTERY_ALWAYS_SHOW=false
+# SPACESHIP_PACKAGE_SHOW=false
+# SPACESHIP_BATTERY_SHOW=false
+# SPACESHIP_BATTERY_ALWAYS_SHOW=false
 
 # --- Plugins
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -21,7 +21,7 @@ plugins=(git sudo alias-tips sh-autosuggestions zsh-syntax-highlighting)
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
 # echo $ZSH_CUSTOM (shows where it is)
-ZSH_CUSTOM=$HOME/dotfiles/custom/themes/
+# ZSH_CUSTOM=$HOME/dotfiles/custom/themes/
 
 # User configuration
 
@@ -45,9 +45,10 @@ source $HOME/.functions
 
 # autosuggest for zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-## Your default theme (choose from spaceship or cobalt2 or use whatever you want)
+
+## Your default theme (not sure about this yet)
 # source "$HOME/dotfiles/custom/themes/spaceship.zsh-theme" # our theme
-source "$HOME/dotfiles/custom/themes/cobalt2.zsh-theme" # our theme
+# source "$HOME/dotfiles/custom/themes/cobalt2.zsh-theme" # our theme
 
 # Key Bindings
 bindkey '^u' autosuggest-accept

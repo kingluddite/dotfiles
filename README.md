@@ -2,6 +2,7 @@
 ## Clone the repo to $HOME
 * It is **important** you install the dotfiles in your $HOME directory
 * `$ git clone https://github.com/kingluddite/dotfiles.git`
+* `$ cd dotfiles`
 
 ## Intall xcode tools
 * Just to be safe
