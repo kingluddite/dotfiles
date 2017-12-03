@@ -1,2 +1,4 @@
 .DS_Store
 *.swp
+oh-my-zsh
+vim/bundle/vim-prettier

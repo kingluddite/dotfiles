@@ -46,6 +46,7 @@ source $HOME/.functions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## Make spaceship your default theme (comment out if you want cobalt2)
 # source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme" # our theme
+source "$HOME/.oh-my-zsh/custom/themes/cobalt2.zsh-theme" # our theme
 
 # Key Bindings
 bindkey '^u' autosuggest-accept
