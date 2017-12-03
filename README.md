@@ -49,6 +49,8 @@
     + Comment out this line in .zshrc so spaceship won't be the default font
     + `# source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"`
 
+![fonts settings iterm](https://i.imgur.com/8zLlEfZ.png)
+
 ### [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 1. Clone this repository in oh-my-zsh's plugins directory:
@@ -62,8 +64,6 @@
 3. Source `~/.zshrc`  to take changes into account:
 
         source ~/.zshrc
-
-![fonts settings iterm](https://i.imgur.com/8zLlEfZ.png)
 
 ## Vim Stuff
 * You first need to install Vundle (vim package manager) with:
