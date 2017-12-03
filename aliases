@@ -1,0 +1,146 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+# =================
+# School Aliases
+# =================
+# emerging tech
+# alias et='cd ~/Documents/dev/classes/gwda313/2016/summer/'
+
+# =================
+# Node Aliases
+# =================
+alias kll='kill -9'
+alias fpid3='lsof -i:3000'
+alias fpid5='lsof -i:5858'
+
+# =================
+# Workflow Aliases
+# =================
+alias md='mkdir'
+## (tip) falias + "word to search for"
+alias falias='alias | grep ' # search all aliases (Jacob!)
+# List file information
+alias ls='ls -laF'  # show slashes for directories
+alias ll='ls -la'   # long list format (inc hidden files/unit size)
+alias h='history'   # lists your previously entered commands
+
+# =================
+# dotfiles Aliases
+# =================
+alias dotf='cd ~/dotfiles'
+
+# =================
+# Server Aliases
+# =================
+# alias editVhosts='sublime /etc/apache2/extra/httpd-vhosts.conf'
+# alias restartApache="sudo apachectl restart"
+# alias editHosts='sublime /etc/hosts'
+
+# =================
+# Config
+# =================
+alias bash='sublime ~/.bash_profile'
+alias refrash='source ~/.bash_profile'
+
+# =================
+# Functions
+# =================
+alias g-bp="gulp-boilerplate"
+
+# =================
+# Navigation 
+# =================
+alias notes='cd ~/Documents/dev/web-dev-notes' # My awesome notes!
+alias sites='cd ~/Sites/'
+alias desk='cd ~/Desktop'
+alias dev='cd ~/Documents/dev'
+alias ..='cd ../'                           # Go back 1 directory level
+alias b='cd ..'                             # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+
+# =================
+# File/Folder Manipulation 
+# =================
+# confirm before executing and be verbose
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+
+# =================
+# Mongo 
+# =================
+# Kill Mongo process when it gets hung up
+alias monkill='ps aux | grep mongod'
+alias fm='ps aux | grep mongo'
+
+# =================
+# OSX 
+# =================
+# Hide/show all desktop icons (useful when presenting)
+alias hide_desktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias show_desktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Hide/show hidden files in Finder
+alias hide_files="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
+alias show_files="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+
+# ================
+# Application 
+# ================
+alias sop='sublime .'
+alias db='cd ~/Dropbox'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias phub='hub browse kingluddite'
+alias vvv='cd ~/Documents/dev/vagrant-local'   # VVV WordPress
+alias sasswatch='sass --watch scss:css'
+
+# ================
+# Exports (History)
+# ================
+# http://jorge.fbarr.net/2011/03/24/making-your-bash-history-more-efficient/
+# Larger bash history (allow 32Â³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+
+# don't put duplicate lines in the history.
+export HISTCONTROL=ignoredups
+
+# ignore same sucessive entries.
+export HISTCONTROL=ignoreboth
+
+# Make some commands not show up in history
+export HISTIGNORE="h"
+
+# ====================
+# Git 
+# ====================
+alias gs='git status'
+alias gap='git add -p'
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gob='git checkout -b '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias glog='git log --pretty=oneline --abbrev-commit'
+alias gitl='git log --pretty=oneline'
+alias lgl='git log --oneline --decorate'
+alias up='git pull upstream master'
+# when I mispell git commands the following 2 commands help
+alias got='git '
+alias get='git '
+
+alias zash='sublime ~/.zshrc'
+alias bhswp='cd ~/Sites/bhs-wp/wp-content/themes/bhs'
+alias bhszz='cd ~/Sites/bhs-wp-zz/wp-content/themes/bhs'
+alias zfrash='source ~/.zshrc'

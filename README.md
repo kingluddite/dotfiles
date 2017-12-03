@@ -34,10 +34,41 @@
 * You first remove the existing iterm preferences with:
     - `$ rm ~/Library/Preferences/com.googlecode.iterm2.plist`
 * Then you create a symlink to where the iterm2 preferences should be from the dotfiles iterm2 preferences (this will save you from having to make all the iterm2 config changes)
-* The solarize light color scheme
+* The solarize light color scheme (if you are on a projector)
 * You can make changes to this plist file and just replace the existing plist file with the file your create to fit your custom needs
     - `$ ln -s ~/dotfiles/init/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist`
-* The prompt I like to use for zsh
+
+### The prompt I like to use for zsh (web bos cobalt2)
+  - Follow these instructions:
+    + Move the cobalt zsh theme to the proper folder
+      * `$ cp -R init/cobalt2.zsh-theme oh-my-zsh/themes/custom`
+    + Change the theme in `$HOME/dotfiles/zshrc` to: `ZSH_THEME=”cobalt2"`
+    + Import the cobalt2 color scheme into iTerm2 using Preferences > Profile > Colors and point to `$HOME/dotfiles/init/cobalt2.itermcolors`
+    + The following are for the special font installations
+    + Install pip with `$ sudo easy_install pip`
+    + `$ cd ~/Desktop` then `$ git clone https://github.com/powerline/fonts`
+    + `$ cd ~/Desktop/fonts`
+    + `$ ./install.sh`
+    + `$ rm -rf ~/Desktop/fonts`
+    + Make the fonts look like this
+    + Comment out this line in .zshrc so spaceship won't be the default font
+    + `# source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"`
+
+### [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+1. Clone this repository in oh-my-zsh's plugins directory:
+
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+2. Activate the plugin in `~/.zshrc`: (This step is already done)
+
+        plugins=( [plugins...] zsh-syntax-highlighting)
+
+3. Source `~/.zshrc`  to take changes into account:
+
+        source ~/.zshrc
+
+![fonts settings iterm](https://i.imgur.com/8zLlEfZ.png)
 
 ## Vim Stuff
 * You first need to install Vundle (vim package manager) with:

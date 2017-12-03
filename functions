@@ -1,0 +1,3 @@
+gulp-boilerplate(){
+  git clone https://github.com/kingluddite/webpack-gulp-boilerplate.git $1 && cd $1 && yarn && npm run dev
+}

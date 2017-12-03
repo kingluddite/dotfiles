@@ -35,7 +35,7 @@ npm install -g spaceship-zsh-theme
 # $HOME/.composer/vendor/bin/valet install
 
 # Install global NPM packages
-npm install --global yarn now gulp
+npm install --global yarn gulp # might add (now)
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
@@ -45,7 +45,7 @@ mkdir $HOME/Sites
 touch ~/.hushlogin
 
 # Symlink the Mackup config file to the home directory
-ln -s ./.mackup.cfg $HOME/.mackup.cfg
+# ln -s ./.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences
 # We will run this last because this will reload the shell

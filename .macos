@@ -84,13 +84,13 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
+defaults write NSGlobalDomain AppleLanguages -array "en"
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
+sudo systemsetup -settimezone "America/Los_Angeles" > /dev/null
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -172,7 +172,6 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Hide Safari's bookmark bar.
 defaults write com.apple.Safari ShowFavoritesBar -bool false
-
 
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -334,7 +333,10 @@ defaults write com.apple.ical "first minute of work hours" 540
 ###############################################################################
 
 # Custom DateFormat
-defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  H:mm"
+# 12 Hour Mode with AM/PM: EEE MMM d  h:mm:ss a
+# 12 Hour Mode without AM/PM: EEE MMM d  h:mm:ss
+# 24 Hour Mode: EEE MMM d  H:mm:ss
+# defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm:ss a"
 
 ###############################################################################
 # Photos                                                                      #
@@ -355,7 +357,7 @@ cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ 
 ###############################################################################
 
 # Set up my preferred keyboard shortcuts
-cp "$HOME/init/Shortcuts.json" "$HOME/Library/Application Support/Spectacle/Shortcuts.json"
+cp "init/Shortcuts.json" "$HOME/Library/Application Support/Spectacle/Shortcuts.json"
 
 ###############################################################################
 # Kill affected applications                                                  #
