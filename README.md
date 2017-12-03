@@ -18,11 +18,18 @@
   * All the aliases I like to use are in the `aliases` file
   * I have a function tied to an alias to start a gulp boilerplate project
 
+4. Install oh-my-zsh
+
+`$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+* My aliases won't work yet because they are not connected yet
+* We'll connect them next using symlinks
+
 4. Symlinks
 *  `$ ./makesymlinks.sh` (inside `dotfiles`) installs all your symlinks
   -  You will see if you view in home directory `$ ls -la` and you'll see all the usual config dotfiles like `.vimrc` and `.zshrc` and now they have symlinks pointing to the dotfiles directory
   -  I organize it this way because it helps add config to github so adding this config to new machines takes minutes instead of hours
-*  might have to manually install package control and restart sublime text
+  -  Try out one of my aliases with `$ dotf` and you should be taken to `~/dotfiles`
 
 ## Setup Iterm
 * This will add my iterm2 Preferences
@@ -51,7 +58,9 @@
 
 ![fonts settings iterm](https://i.imgur.com/8zLlEfZ.png)
 
-### [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+### [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) Syntax
+* This lets you know if you are typing a valid command (green)
+* Or an invalid command (red)
 
 1. Clone this repository in oh-my-zsh's plugins directory:
 
