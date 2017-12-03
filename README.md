@@ -18,12 +18,7 @@
   * All the aliases I like to use are in the `aliases` file
   * I have a function tied to an alias to start a gulp boilerplate project
 
-4. Install oh-my-zsh
-
-`$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-
-* My aliases won't work yet because they are not connected yet
-* We'll connect them next using symlinks
+4. Refresh zshrc with ``
 
 4. Symlinks
 *  `$ ./makesymlinks.sh` (inside `dotfiles`) installs all your symlinks
@@ -42,6 +37,8 @@
 
 ### The prompt I like to use for zsh (web bos cobalt2)
   - Follow these instructions:
+    + Make a new folder for custom oh-my-zsh themes
+      * `$ mkdir oh-my-zsh/custom/themes/`
     + Move the cobalt zsh theme to the proper folder
       * `$ cp -R init/cobalt2.zsh-theme oh-my-zsh/themes/custom`
     + Change the theme in `$HOME/dotfiles/zshrc` to: `ZSH_THEME=”cobalt2"`

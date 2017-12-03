@@ -20,7 +20,8 @@ plugins=(git sudo alias-tips sh-autosuggestions zsh-syntax-highlighting)
 
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# echo $ZSH_CUSTOM (shows where it is)
+ZSH_CUSTOM=$HOME/dotfiles/custom/themes/
 
 # User configuration
 
@@ -45,8 +46,8 @@ source $HOME/.functions
 # autosuggest for zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## Make spaceship your default theme (comment out if you want cobalt2)
-# source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme" # our theme
-source "$HOME/.oh-my-zsh/custom/themes/cobalt2.zsh-theme" # our theme
+source "$HOME/dotfiles/custom/themes/spaceship.zsh-theme" # our theme
+# source "$HOME/dotfiles/custom/themes/cobalt2.zsh-theme" # our theme
 
 # Key Bindings
 bindkey '^u' autosuggest-accept
