@@ -98,6 +98,7 @@
     - Close and reopen iTerm
   
 ## Run apps
+* I like using Spectacle and Alfred all the time
 * Alfred App (open using Spotlight with `cmd` + `spacebar`)
   - Open Preferences
     + Change hot key to `ctrl` + `spacebar`
