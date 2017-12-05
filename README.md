@@ -38,9 +38,13 @@ I teach at a school where the computers are wiped every night so it is essential
 * `$ cd dotfiles`
 *  `$ ./makesymlinks.sh` (make sure you are inside the `dotfiles` directory when you run this)
   -  You will see if you view $HOME with `$ ls -la` and you'll see all the usual config dotfiles like `.vimrc` and `.zshrc` and now they have symlinks pointing to the `dotfiles` directory
-  -  Try out two of my aliases to see if it is working
-  -  `$ desk` - Takes you to the `Desktop`
-  -  `$ dotf` - Takes you to the `dotfiles` directory
+
+### Refresh the zshrc
+* `$ source zshrc` (Make sure you are inside `dotfiles`)
+
+#### Try out two of my aliases to see if it is working
+* `$ desk` - Takes you to the `Desktop`
+* `$ dotf` - Takes you to the `dotfiles` directory
 
 ## Setup Iterm
 * This will add my iTerm2 Preferences
@@ -60,6 +64,7 @@ I teach at a school where the computers are wiped every night so it is essential
     + Move the **cobalt zsh theme** to the proper folder
       * `$ cp -R init/cobalt2.zsh-theme ~/.oh-my-zsh/themes`
     + Import the cobalt2 color scheme into iTerm2 using Preferences > Profile > Colors and point to `$HOME/dotfiles/init/cobalt2.itermcolors`
+    + `$ source ~/.zshrc`
 
 #### The following are for the special font installations
 ##### Install pip
@@ -73,9 +78,6 @@ I teach at a school where the computers are wiped every night so it is essential
 * Make the iTerm2 font settins look like this
 
 ![fonts settings iterm](https://i.imgur.com/8zLlEfZ.png)
-
-* Comment out this line in .zshrc so spaceship won't be the default font
-* `# source "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"`
 
 
 ### [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) Syntax
@@ -104,6 +106,7 @@ I teach at a school where the computers are wiped every night so it is essential
     - Close and reopen iTerm
   
 ## Run apps
+* I like using Spectacle and Alfred all the time
 * Alfred App (open using Spotlight with `cmd` + `spacebar`)
   - Open Preferences
     + Change hot key to `ctrl` + `spacebar`

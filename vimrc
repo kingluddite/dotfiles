@@ -22,6 +22,7 @@ Plugin 'sirver/ultisnips'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'yuroyoro/vim-autoclose'
 Plugin 'kien/ctrlp.vim' "Fuzzy searching if dmenu isn't available
 Plugin 'w0rp/ale'
