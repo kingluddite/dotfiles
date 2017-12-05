@@ -1,3 +1,9 @@
+# What is this?
+There are a ton of dotfiles on the web and many of them are far more detailed then mine. [View them all here](https://dotfiles.github.io/)
+
+The point of dotfiles is if you get a new computer or move to a new computer you can get all the setting you like on that computer... and get them on that computer quickly. I got tired of spending 2 hours setting up a new computer. There has to be a better way and dotfiles are that better way.
+
+I teach at a school where the computers are wiped every night so it is essential I can get my students using the same setup. 
 # Instructions
 ## Clone the repo to $HOME
 * It is **important** you install the dotfiles in your $HOME directory
@@ -116,6 +122,11 @@
   - If you are setting up a new user on your mac, you will need to do this
 * If you get a bunch of homebrew permission errors use this command `$ sudo chown -R $(whoami) $(brew --prefix)` (is the how todo it in High Sierra)
 * You may need to install the **latest vim** using: `$ brew install vim --override-system-vi`
+
+## Get all the Sublime Text Packages, Key bindings and Preferences set up
+* Check out this [Sublime Text Setup repo](https://github.com/kingluddite/sublime-text-bootstrap)
+* We already have updated Sublime Text with settings in this repo but this takes it to the next step to get Sublime Text the way I like it.
+* It is not necessary but I like this repo so all my students are using the same Text Editor settings
 
 
 
