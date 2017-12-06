@@ -127,7 +127,12 @@ I teach at a school where the computers are wiped every night so it is essential
 * You may need to install the **latest vim** using: `$ brew install vim --override-system-vi`
 
 ## Install Macvim for for a faster terminal
-`$ brew install macvim --with-cscope --with-lua --override-system-vim --with-luajit --with-python3`
+```
+brew reinstall vim --HEAD --with-cscope --with-lua --override-system-vim
+brew reinstall macvim --HEAD --with-cscope --with-lua --override-system-vim
+```
+
+**note** the above 2nd command for macvim is currently broken in macvim8
 
 ## Get all the Sublime Text Packages, Key bindings and Preferences set up
 * Check out this [Sublime Text Setup repo](https://github.com/kingluddite/sublime-text-bootstrap)
