@@ -126,6 +126,9 @@ I teach at a school where the computers are wiped every night so it is essential
 * If you get a bunch of homebrew permission errors use this command `$ sudo chown -R $(whoami) $(brew --prefix)` (is the how todo it in High Sierra)
 * You may need to install the **latest vim** using: `$ brew install vim --override-system-vi`
 
+## Install Macvim for for a faster terminal
+`$ brew install macvim --with-cscope --with-lua --override-system-vim --with-luajit --with-python3`
+
 ## Get all the Sublime Text Packages, Key bindings and Preferences set up
 * Check out this [Sublime Text Setup repo](https://github.com/kingluddite/sublime-text-bootstrap)
 * We already have updated Sublime Text with settings in this repo but this takes it to the next step to get Sublime Text the way I like it.
