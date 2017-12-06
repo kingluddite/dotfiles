@@ -645,6 +645,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>CFF1E3C7-6079-4DBD-B5C6-0D11EF21ABFA</string>
+	<key>DimBackgroundWindows</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -668,7 +670,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -690,13 +692,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1570 619 597 208 0 0 2560 1417 </string>
+	<string>674 330 597 94 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>337 862 796 473 0 0 2560 1417 </string>
+	<string>123 394 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>280 676 745 527 0 0 2560 1417 </string>
+	<string>710 323 730 550 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>329 237 718 467 0 0 2560 1417 </string>
+	<string>130 42 730 527 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>364 158 905 552 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -2026,7 +2028,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-03T01:25:10Z</date>
+	<date>2017-12-05T14:16:45Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
