@@ -1,3 +1,9 @@
+# What is this?
+There are a ton of dotfiles on the web and many of them are far more detailed then mine. [View them all here](https://dotfiles.github.io/)
+
+The point of dotfiles is if you get a new computer or move to a new computer you can get all the setting you like on that computer... and get them on that computer quickly. I got tired of spending 2 hours setting up a new computer. There has to be a better way and dotfiles are that better way.
+
+I teach at a school where the computers are wiped every night so it is essential I can get my students using the same setup. 
 # Instructions
 ## Clone the repo to $HOME
 * It is **important** you install the dotfiles in your $HOME directory
@@ -25,9 +31,11 @@
 * I have a function tied to an alias to start a gulp boilerplate project
 
 ## Install oh-my-zsh
+`$ cd` (go back to $HOME)
 `$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 ## Add Symlinks
+* `$ cd dotfiles`
 *  `$ ./makesymlinks.sh` (make sure you are inside the `dotfiles` directory when you run this)
   -  You will see if you view $HOME with `$ ls -la` and you'll see all the usual config dotfiles like `.vimrc` and `.zshrc` and now they have symlinks pointing to the `dotfiles` directory
 
@@ -54,7 +62,7 @@
 ### The prompt I like to use for zsh (web bos cobalt2)
   - Follow these instructions:
     + Move the **cobalt zsh theme** to the proper folder
-      * `$ cp -R init/cobalt2.zsh-theme ~/.oh-my-zsh/themes/cobalt2.zsh-theme`
+      * `$ cp -R init/cobalt2.zsh-theme ~/.oh-my-zsh/themes`
     + Import the cobalt2 color scheme into iTerm2 using Preferences > Profile > Colors and point to `$HOME/dotfiles/init/cobalt2.itermcolors`
     + `$ source ~/.zshrc`
 
@@ -117,6 +125,19 @@
   - If you are setting up a new user on your mac, you will need to do this
 * If you get a bunch of homebrew permission errors use this command `$ sudo chown -R $(whoami) $(brew --prefix)` (is the how todo it in High Sierra)
 * You may need to install the **latest vim** using: `$ brew install vim --override-system-vi`
+
+## Install Macvim for for a faster terminal
+```
+brew reinstall vim --HEAD --with-cscope --with-lua --override-system-vim
+brew reinstall macvim --HEAD --with-cscope --with-lua --override-system-vim
+```
+
+**note** the above 2nd command for macvim is currently broken in macvim8
+
+## Get all the Sublime Text Packages, Key bindings and Preferences set up
+* Check out this [Sublime Text Setup repo](https://github.com/kingluddite/sublime-text-bootstrap)
+* We already have updated Sublime Text with settings in this repo but this takes it to the next step to get Sublime Text the way I like it.
+* It is not necessary but I like this repo so all my students are using the same Text Editor settings
 
 
 
