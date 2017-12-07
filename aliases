@@ -138,12 +138,13 @@ alias gx='gitx --all'
 alias glog='git log --pretty=oneline --abbrev-commit'
 alias gitl='git log --pretty=oneline'
 alias lgl='git log --oneline --decorate'
+alias gpush='git push origin master'
+alias gpull='git pull origin master'
 alias up='git pull upstream master'
 # when I mispell git commands the following 2 commands help
 alias got='git '
 alias get='git '
 
-alias zash='sublime ~/.zshrc'
-alias bhswp='cd ~/Sites/bhs-wp/wp-content/themes/bhs'
-alias bhszz='cd ~/Sites/bhs-wp-zz/wp-content/themes/bhs'
-alias zfrash='source ~/.zshrc'
+# Sublime Text and ZSH
+alias zash='sublime ~/.zshrc' # open zshrc in sublime
+alias zfrash='source ~/.zshrc' # refresh zshrc
