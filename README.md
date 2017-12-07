@@ -186,6 +186,14 @@ I teach at a school where the computers are wiped every night so it is essential
     - Open the vimrc file with `$ vim vimrc`
     - Install plugins with `:PluginInstall`
     - Close and reopen iTerm
+* Youcompleteme
+    - We just installed `cmake` using brew
+    - Compiling YCM with semantic support and JavaScript
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer --javascript
+```
   
 ## Run apps
 * I like using Spectacle and Alfred all the time
@@ -215,11 +223,6 @@ brew reinstall macvim --HEAD --with-cscope --with-lua --override-system-vim
 ```
 
 **note** the above 2nd command for macvim is currently broken in macvim8
-
-## Get all the Sublime Text Packages, Key bindings and Preferences set up
-* Check out this [Sublime Text Setup repo](https://github.com/kingluddite/sublime-text-bootstrap)
-* We already have updated Sublime Text with settings in this repo but this takes it to the next step to get Sublime Text the way I like it.
-* It is not necessary but I like this repo so all my students are using the same Text Editor settings
 
 ## Feedback
 * If you think I could do something better or I'm missing something please feel free to fork this repo and submit a pull request

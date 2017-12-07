@@ -34,6 +34,7 @@ brew 'tree'
 # brew 'mas'
 brew 'node'
 brew 'trash'
+brew 'cmake'
 # brew 'wget'
 
 # Development
