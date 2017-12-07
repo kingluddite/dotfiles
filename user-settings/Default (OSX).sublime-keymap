@@ -1,0 +1,45 @@
+[
+  // enter command mode in Vintage
+  { "keys": ["j", "k"], "command": "exit_insert_mode",
+  "context":
+  [
+    { "key": "setting.command_mode", "operand": false },
+    { "key": "setting.is_widget", "operand": false }
+  ]
+},
+
+  // open markdown in preview
+{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+{ "keys": ["ctrl+y"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}},
+
+  // Select (or type) the syntax to apply to the current view.
+    { "keys": ["ctrl+shift+y"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Set Syntax: "} },
+
+  // swap the keybindings for paste and paste_and_indent
+    { "keys": ["super+v"], "command": "paste_and_indent" },
+    { "keys": ["super+shift+v"], "command": "paste" },
+
+  // create new snippet
+  { "keys": ["ctrl+n", "ctrl+s"], "command": "new_snippet"},
+{ "keys": ["ctrl+shift+w"], "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" } },
+
+  // Close tag
+      { "keys": ["super+."], "command": "close_tag" },
+
+  // [HTMLPrettify] Format your HTML, CSS, and JS
+      { "keys": ["super+shift+h"], "command": "htmlprettify" },
+
+  // Reveal the currently open file in the sidebar
+    { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" },
+  // AdvancedNewFile
+    { "keys": ["ctrl+alt+n"], "command": "advanced_new_file_new" },
+
+      // Wrap selection in tag
+          {
+              "keys"      :   ["alt+shift+t"],
+              "command"   :   "insert_snippet",
+              "args": {
+                  "contents": "<${1:p}>${0:$SELECTION}</${1}>"
+              }
+          },
+]

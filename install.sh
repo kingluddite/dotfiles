@@ -35,7 +35,7 @@ chsh -s $(which zsh)
 # $HOME/.composer/vendor/bin/valet install
 
 # Install global NPM packages
-npm install --global yarn gulp # might add (now)
+npm install --global yarn gulp eslint prettier # might add (now)
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed

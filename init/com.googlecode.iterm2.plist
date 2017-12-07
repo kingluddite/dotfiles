@@ -696,7 +696,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>123 394 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>710 323 730 550 0 0 1440 877 </string>
+	<string>724 0 712 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>130 42 730 527 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1982,6 +1982,8 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>533748608.94227397</real>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2017,6 +2019,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>~/dotfiles/init</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
@@ -2028,7 +2032,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-05T14:16:45Z</date>
+	<date>2017-12-06T14:16:46Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
