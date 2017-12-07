@@ -51,7 +51,7 @@ alias refrash='source ~/.bash_profile'
 alias g-bp="gulp-boilerplate"
 
 # =================
-# Navigation 
+# Navigation
 # =================
 alias notes='cd ~/Documents/dev/web-dev-notes' # My awesome notes!
 alias sites='cd ~/Sites/'
@@ -66,7 +66,7 @@ alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 
 # =================
-# File/Folder Manipulation 
+# File/Folder Manipulation
 # =================
 # confirm before executing and be verbose
 alias cp='cp -iv'
@@ -75,14 +75,17 @@ alias rm='rm -iv'
 alias mkdir='mkdir -pv'
 
 # =================
-# Mongo 
+# Mongo
 # =================
 # Kill Mongo process when it gets hung up
 alias monkill='ps aux | grep mongod'
+alias mid='ps -eaf | grep mongod'
 alias fm='ps aux | grep mongo'
+# sudo kill <pID> (find above pid and then kill it)
+
 
 # =================
-# OSX 
+# OSX
 # =================
 # Hide/show all desktop icons (useful when presenting)
 alias hide_desktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -93,7 +96,7 @@ alias hide_files="defaults write com.apple.finder AppleShowAllFiles FALSE && kil
 alias show_files="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 
 # ================
-# Application 
+# Application
 # ================
 alias sop='sublime .'
 alias db='cd ~/Dropbox'
@@ -120,7 +123,7 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="h"
 
 # ====================
-# Git 
+# Git
 # ====================
 alias gs='git status'
 alias gap='git add -p'
