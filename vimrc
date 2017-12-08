@@ -271,7 +271,10 @@ set t_Co=256
 set background=dark
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
-"let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Make sure ctrlp ignores this stuff
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
 " colorscheme solarized
