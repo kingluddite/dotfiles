@@ -102,7 +102,7 @@ alias sop='sublime .'
 alias db='cd ~/Dropbox'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias phub='hub browse kingluddite'
-alias vvv='cd ~/Documents/dev/vagrant-local'   # VVV WordPress
+alias vvv='cd ~/VVV'   # VVV WordPress
 alias sasswatch='sass --watch scss:css'
 
 # ================
