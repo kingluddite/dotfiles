@@ -20,6 +20,7 @@ Plugin 'jnurmine/zenburn'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'sirver/ultisnips'
 Plugin 'ervandew/supertab' " Must load before youcompleteme
+Plugin 'pangloss/vim-javascript'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
@@ -35,6 +36,9 @@ Plugin 'vimwiki/vimwiki'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " (required) activates indenting for files
+
+" manually enable syntax highlighting
+syntax enable
 
 " add Powerline font
 " set guifont=Inconsolata\ for\Powerline:h15
@@ -92,6 +96,12 @@ let g:ale_linters = {
 
 " shortcut to run :ALEFix (<space>d)
 nmap <leader>d <Plug>(ale_fix)
+
+" makes prettier work with ale
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fix_on_save = 1 " run prettier on save
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5' " configure prettier
 
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
@@ -262,9 +272,8 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" prettier
 " disable autocomments after first // and then hitting return
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Color scheme (terminal)
 set t_Co=256
