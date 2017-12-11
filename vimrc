@@ -21,13 +21,13 @@ Plugin 'mitermayer/vim-prettier'
 Plugin 'sirver/ultisnips'
 Plugin 'ervandew/supertab' " Must load before youcompleteme
 Plugin 'pangloss/vim-javascript'
+Plugin 'chemzqm/vim-jsx-improve' " jsx support
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'chun-yang/auto-pairs'
-" Plugin 'yuroyoro/vim-autoclose'
 Plugin 'kien/ctrlp.vim' "Fuzzy searching if dmenu isn't available
 Plugin 'w0rp/ale'
 Plugin 'dsimidzija/vim-nerdtree-ignore'
@@ -101,6 +101,7 @@ nmap <leader>d <Plug>(ale_fix)
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fix_on_save = 1 " run prettier on save
+let g:ale_javascript_eslint_use_global = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5' " configure prettier
 
 " Set this. Airline will handle the rest.
@@ -286,8 +287,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
-" colorscheme solarized
-" my theme
 syntax on
 colors zenburn
 

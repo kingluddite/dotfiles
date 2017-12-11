@@ -49,6 +49,7 @@ alias refrash='source ~/.bash_profile'
 # Functions
 # =================
 alias g-bp="gulp-boilerplate"
+alias e-bp="eslint-boilerplate"
 
 # =================
 # Navigation
