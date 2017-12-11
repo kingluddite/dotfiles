@@ -3,5 +3,5 @@ gulp-boilerplate(){
 }
 
 eslint-boilerplate(){
-  git clone https://github.com/kingluddite/eslint-boilerplate.git $1 && cd $1 && yarn
+  git clone https://github.com/kingluddite/eslint-boilerplate.git . && yarn
 }
