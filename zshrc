@@ -26,6 +26,7 @@ plugins=(git sudo alias-tips sh-autosuggestions zsh-syntax-highlighting)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$PATH:/Users/philiphowley/.npm-packages/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 ## MAMP stuff

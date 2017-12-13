@@ -22,6 +22,7 @@ Plugin 'sirver/ultisnips'
 Plugin 'ervandew/supertab' " Must load before youcompleteme
 Plugin 'pangloss/vim-javascript'
 Plugin 'chemzqm/vim-jsx-improve' " jsx support
+Plugin 'marijnh/tern_for_vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
