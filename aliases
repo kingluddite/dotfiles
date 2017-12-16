@@ -27,6 +27,9 @@ alias ls='ls -laF'  # show slashes for directories
 alias ll='ls -la'   # long list format (inc hidden files/unit size)
 alias h='history'   # lists your previously entered commands
 
+# Recursively remove .DS_Store files
+alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
+
 # =================
 # dotfiles Aliases
 # =================
