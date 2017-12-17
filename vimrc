@@ -214,7 +214,8 @@ set showmode
 set showcmd
 
 " set clipboard to easily copy from vim and paste into OSx
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard=exclude:.*
 
 " Searching
 nnoremap / /\v
