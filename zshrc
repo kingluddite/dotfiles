@@ -124,4 +124,8 @@ function parse_git_branch() {
 
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+prompt_dir() {
+    prompt_segment blue black "%-53<...<%~%<<"
+}
 export KEYTIMEOUT=1
