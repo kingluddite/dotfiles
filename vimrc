@@ -91,16 +91,16 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:UltiSnipsEditSplit="vertical"
 
 " ESLint through Vim
-let g:ale_linters = {
-  \ 'javascript': ['eslint'],
-  \}
-
+" let g:ale_linters = {
+"   \ 'javascript': ['eslint'],
+"   \}
+"
 " shortcut to run :ALEFix (<space>d)
 nmap <leader>d <Plug>(ale_fix)
 
 " makes prettier work with ale
 let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['javascript'] = ['prettier', 'eslint']
 let g:ale_fix_on_save = 1 " run prettier on save
 let g:ale_javascript_eslint_use_global = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5' " configure prettier
@@ -215,6 +215,7 @@ set showcmd
 
 " set clipboard to easily copy from vim and paste into OSx
 set clipboard=unnamed
+" set clipboard=exclude:.*
 
 " Searching
 nnoremap / /\v
