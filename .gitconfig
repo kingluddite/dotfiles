@@ -79,6 +79,8 @@
 		fi \
 	}; f"
 
+# d selects difftool
+	d = difftool
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -185,4 +187,12 @@
 [url "git://gist.github.com/"]
 
   insteadOf = "gist:"
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
+[alias]
 
