@@ -20,6 +20,8 @@ Plugin 'jnurmine/zenburn'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'sirver/ultisnips'
 Plugin 'ervandew/supertab' " Must load before youcompleteme
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'chemzqm/vim-jsx-improve' " jsx support
 Plugin 'marijnh/tern_for_vim'
