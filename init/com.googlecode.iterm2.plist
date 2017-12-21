@@ -692,13 +692,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>674 330 597 94 0 0 1440 877 </string>
+	<string>674 213 597 77 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>123 394 796 473 0 0 1440 877 </string>
+	<string>123 466 918 401 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>724 0 712 877 0 0 1440 877 </string>
+	<string>723 0 714 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>130 42 730 527 0 0 1440 877 </string>
+	<string>4 346 730 527 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>364 158 905 552 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -1273,7 +1273,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 18</string>
+			<string>FuraCodeNerdFontCM-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1909,7 +1909,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InconsolataForPowerline 18</string>
+			<string>FuraCodeNerdFontCM-Light 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2032,11 +2032,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-06T14:16:46Z</date>
+	<date>2017-12-20T14:02:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.1.5</string>
 </dict>
