@@ -53,6 +53,9 @@ alias refrash='source ~/.bash_profile'
 # =================
 alias g-bp="gulp-boilerplate"
 alias e-bp="eslint-boilerplate"
+# Call tree command to see directory structure
+# t 1 will show immediate directory; t 3 default
+alias t=_t
 
 # =================
 # Navigation

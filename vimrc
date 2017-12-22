@@ -20,6 +20,8 @@ Plugin 'jnurmine/zenburn'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'sirver/ultisnips'
 Plugin 'ervandew/supertab' " Must load before youcompleteme
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'chemzqm/vim-jsx-improve' " jsx support
 Plugin 'marijnh/tern_for_vim'
@@ -29,10 +31,11 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'mattn/emmet-vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'chun-yang/auto-pairs'
-Plugin 'kien/ctrlp.vim' "Fuzzy searching if dmenu isn't available
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'w0rp/ale'
 Plugin 'dsimidzija/vim-nerdtree-ignore'
 Plugin 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'vimwiki/vimwiki'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,7 +46,8 @@ syntax enable
 
 " add Powerline font
 " set guifont=Inconsolata\ for\Powerline:h15
-set guifont=Fira\ Code:h12
+" set guifont=Fira\ Code:h12
+set guifont=Fira\ Code\ Nerd\ Font:h11
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256            " enable 256-color mode
