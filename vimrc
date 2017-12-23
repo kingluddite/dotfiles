@@ -1,48 +1,38 @@
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 
-filetype off                  " required
+call plug#begin('~/.vim/bundle')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" Git plugin not hosted on GitHub
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'scrooloose/nerdtree'
-Plugin 'prettier/prettier'
-Plugin 'jnurmine/zenburn'
-Plugin 'mitermayer/vim-prettier'
-Plugin 'sirver/ultisnips'
-Plugin 'ervandew/supertab' " Must load before youcompleteme
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'pangloss/vim-javascript'
-Plugin 'chemzqm/vim-jsx-improve' " jsx support
-Plugin 'marijnh/tern_for_vim'
-Plugin 'valloric/youcompleteme'
-Plugin 'tpope/vim-surround'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'mattn/emmet-vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'chun-yang/auto-pairs'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'w0rp/ale'
-Plugin 'dsimidzija/vim-nerdtree-ignore'
-Plugin 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'vimwiki/vimwiki'
+" Keep Plugin commands between plug#begin/end.
+" Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'prettier/prettier'
+    Plug 'jnurmine/zenburn'
+    Plug 'mitermayer/vim-prettier'
+    Plug 'sirver/ultisnips'
+    Plug 'ervandew/supertab' " Must load before youcompleteme
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'pangloss/vim-javascript'
+    Plug 'chemzqm/vim-jsx-improve' " jsx support
+    Plug 'marijnh/tern_for_vim'
+    Plug 'valloric/youcompleteme'
+    Plug 'tpope/vim-surround'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'mattn/emmet-vim'
+    Plug 'tomtom/tcomment_vim'
+    Plug 'chun-yang/auto-pairs'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'w0rp/ale'
+    Plug 'dsimidzija/vim-nerdtree-ignore'
+    Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'vimwiki/vimwiki'
+    Plug 'bling/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'easymotion/vim-easymotion'
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " (required) activates indenting for files
-
-" manually enable syntax highlighting
-syntax enable
+" Initialize plugin system
+call plug#end()            " required
 
 " add Powerline font
 " set guifont=Inconsolata\ for\Powerline:h15
@@ -293,7 +283,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
-syntax on
 colors zenburn
 
 " iterm cursor changes depending on mode
