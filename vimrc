@@ -30,6 +30,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'bling/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'easymotion/vim-easymotion'
+    Plug 'ap/vim-css-color'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
 call plug#end()            " required
