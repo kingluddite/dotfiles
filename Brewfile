@@ -86,7 +86,7 @@ cask 'font-source-code-pro-for-powerline'
 # cask 'font-source-sans-pro'
 # cask 'font-source-serif-pro'
 cask 'font-fira-code'
-cast 'font-firacode-nerd-font-mono'
+cask 'font-firacode-nerd-font-mono'
 # Install Mac App Store apps
 # mas '1Password', id: 443987910
 # mas 'Byword', id: 420212497
