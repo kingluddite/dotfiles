@@ -694,9 +694,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>674 213 597 77 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>123 466 918 401 0 0 1440 877 </string>
+	<string>168 274 918 401 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>723 0 714 877 0 0 1440 877 </string>
+	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>4 346 730 527 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -933,7 +933,7 @@
 				<real>0.91611063480377197</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>Custom Command</key>
 			<string>Yes</string>
 			<key>Custom Directory</key>
@@ -1569,7 +1569,7 @@
 				<real>0.99659550189971924</real>
 			</dict>
 			<key>Cursor Type</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>Yes</string>
 			<key>Custom Directory</key>
@@ -2032,7 +2032,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-20T14:02:26Z</date>
+	<date>2017-12-26T18:00:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
