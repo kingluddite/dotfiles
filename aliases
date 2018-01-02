@@ -155,3 +155,6 @@ alias get='git '
 # Sublime Text and ZSH
 alias zash='sublime ~/.zshrc' # open zshrc in sublime
 alias zfrash='source ~/.zshrc' # refresh zshrc
+
+# Heroku
+alias gph='git push heroku master'
