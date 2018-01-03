@@ -158,3 +158,6 @@ alias zfrash='source ~/.zshrc' # refresh zshrc
 
 # Heroku
 alias gph='git push heroku master'
+alias ho='heroku open'
+alias hl='heroku login'
+alias hc='heroku create'
