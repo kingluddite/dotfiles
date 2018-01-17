@@ -86,9 +86,25 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:UltiSnipsEditSplit="vertical"
 
 " ESLint through Vim
+" Fix eslint on save
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+" disable the Ale HTML linters
 let g:ale_linters = {
-  \ 'javascript': ['eslint'],
-  \}
+\   'html': [],
+\}
+let g:ale_set_highlights = 0
+
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = [
+\ 'prettier', 'eslint'
+\]
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+
+" let g:ale_linters = {
+"   \ 'javascript': ['stylelint', 'eslint'],
+"   \}
 
 " shortcut to run :ALEFix (<space>d)
 nmap <leader>d <Plug>(ale_fix)
