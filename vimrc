@@ -90,7 +90,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 " ESLint through Vim
 " Fix eslint on save
-let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 " disable the Ale HTML linters
 let g:ale_linters = {
