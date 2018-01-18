@@ -1,44 +1,44 @@
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 
-call plug#begin('~/.vim/bundle')
+filetype off                  " required
 
-" Keep Plugin commands between plug#begin/end.
-" Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-    Plug 'prettier/prettier'
-    Plug 'jnurmine/zenburn'
-    Plug 'mitermayer/vim-prettier'
-    Plug 'sirver/ultisnips'
-    Plug 'ervandew/supertab' " Must load before youcompleteme
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'pangloss/vim-javascript'
-    Plug 'chemzqm/vim-jsx-improve' " jsx support
-    Plug 'marijnh/tern_for_vim'
-    Plug 'valloric/youcompleteme'
-    Plug 'tpope/vim-surround'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'mattn/emmet-vim'
-    Plug 'tomtom/tcomment_vim'
-    Plug 'chun-yang/auto-pairs'
-    Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'w0rp/ale'
-    Plug 'dsimidzija/vim-nerdtree-ignore'
-    Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'vimwiki/vimwiki'
-    Plug 'bling/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'ap/vim-css-color'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" Git plugin not hosted on GitHub
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'scrooloose/nerdtree'
+Plugin 'prettier/prettier'
+Plugin 'jnurmine/zenburn'
+Plugin 'mitermayer/vim-prettier'
+Plugin 'sirver/ultisnips'
+Plugin 'ervandew/supertab' " Must load before youcompleteme
+Plugin 'valloric/youcompleteme'
+Plugin 'tpope/vim-surround'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'mattn/emmet-vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'chun-yang/auto-pairs'
+" Plugin 'yuroyoro/vim-autoclose'
+Plugin 'kien/ctrlp.vim' "Fuzzy searching if dmenu isn't available
+Plugin 'w0rp/ale'
+Plugin 'dsimidzija/vim-nerdtree-ignore'
+Plugin 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
+Plugin 'vimwiki/vimwiki'
 " All of your Plugins must be added before the following line
-" Initialize plugin system
-call plug#end()            " required
+call vundle#end()            " required
+filetype plugin indent on    " (required) activates indenting for files
 
 " add Powerline font
 " set guifont=Inconsolata\ for\Powerline:h15
-" set guifont=Fira\ Code:h12
-set guifont=Fira\ Code\ Nerd\ Font:h11
+set guifont=Fira\ Code:h12
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256            " enable 256-color mode
@@ -86,19 +86,28 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:UltiSnipsEditSplit="vertical"
 
 " ESLint through Vim
+" Fix eslint on save
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+" disable the Ale HTML linters
+let g:ale_linters = {
+\   'html': [],
+\}
+let g:ale_set_highlights = 0
+
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = [
+\ 'prettier', 'eslint'
+\]
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+
 " let g:ale_linters = {
-"   \ 'javascript': ['eslint'],
+"   \ 'javascript': ['stylelint', 'eslint'],
 "   \}
-"
+
 " shortcut to run :ALEFix (<space>d)
 nmap <leader>d <Plug>(ale_fix)
-
-" makes prettier work with ale
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier', 'eslint']
-let g:ale_fix_on_save = 1 " run prettier on save
-let g:ale_javascript_eslint_use_global = 1
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5' " configure prettier
 
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
@@ -210,7 +219,6 @@ set showcmd
 
 " set clipboard to easily copy from vim and paste into OSx
 set clipboard=unnamed
-" set clipboard=exclude:.*
 
 " Searching
 nnoremap / /\v
@@ -270,8 +278,9 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" prettier
 " disable autocomments after first // and then hitting return
-" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Color scheme (terminal)
 set t_Co=256
@@ -284,8 +293,12 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
+" colorscheme solarized
+" my theme
+syntax on
 colors zenburn
-
+" adds blue highlight to vim in visual mode selections
+highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
 " iterm cursor changes depending on mode
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 " let &t_SR = "\<Esc>]50;CursorShape=2\x7"
