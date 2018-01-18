@@ -103,7 +103,7 @@ let g:ale_fixers['javascript'] = [
 \ 'prettier', 'eslint'
 \]
 let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 
 " let g:ale_linters = {
 "   \ 'javascript': ['stylelint', 'eslint'],
