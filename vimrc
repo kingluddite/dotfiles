@@ -2,38 +2,41 @@ set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" Git plugin not hosted on GitHub
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'scrooloose/nerdtree'
-Plugin 'prettier/prettier'
-Plugin 'jnurmine/zenburn'
-Plugin 'mitermayer/vim-prettier'
-Plugin 'sirver/ultisnips'
-Plugin 'ervandew/supertab' " Must load before youcompleteme
-Plugin 'valloric/youcompleteme'
-Plugin 'tpope/vim-surround'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'mattn/emmet-vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'chun-yang/auto-pairs'
-" Plugin 'yuroyoro/vim-autoclose'
-Plugin 'kien/ctrlp.vim' "Fuzzy searching if dmenu isn't available
-Plugin 'w0rp/ale'
-Plugin 'dsimidzija/vim-nerdtree-ignore'
-Plugin 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
-Plugin 'vimwiki/vimwiki'
+" Keep Plugin commands between plug#begin/end.
+" Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'prettier/prettier'
+    Plug 'jnurmine/zenburn'
+    Plug 'mitermayer/vim-prettier'
+    Plug 'sirver/ultisnips'
+    Plug 'ervandew/supertab' " Must load before youcompleteme
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'pangloss/vim-javascript'
+    Plug 'chemzqm/vim-jsx-improve' " jsx support
+    Plug 'marijnh/tern_for_vim'
+    Plug 'valloric/youcompleteme'
+    Plug 'tpope/vim-surround'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'mattn/emmet-vim'
+    Plug 'tomtom/tcomment_vim'
+    Plug 'chun-yang/auto-pairs'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'w0rp/ale'
+    Plug 'dsimidzija/vim-nerdtree-ignore'
+    Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'vimwiki/vimwiki'
+    Plug 'bling/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'ap/vim-css-color'
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+" Initialize plugin system
+call plug#end()            " required
+
 filetype plugin indent on    " (required) activates indenting for files
 
 " add Powerline font
