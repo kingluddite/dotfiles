@@ -48,6 +48,16 @@ set t_Co=256            " enable 256-color mode
 set term=xterm-256color
 set termencoding=utf-8"
 
+" Keep 1000 items in the history
+set history=1000
+
+" shows a menu when using tab completion
+set wildmenu
+
+" create backups
+set backup
+" set bex=SOMETHING
+
 if has("gui_running")
    let s:uname = system("uname")
    if s:uname == "Darwin\n"
@@ -129,14 +139,15 @@ set shiftwidth=2
 set tabstop=2     " tab spacing
 
 " Linebreak on 500 characters
-set lbr
+set lbr " makes for an easier to read line wrap
 set tw=500
 
 set ai            " Auto indent
-" set si            " Smart indent
+set si            " Smart indent
 set wrap          " Wrap lines
 set nowrap        " Don't wrap text
 
+set bg=dark
 " Security
 set modelines=0
 
@@ -179,7 +190,7 @@ set expandtab      " use spaces instead of tabs
 set noshiftround   " always indent/outdent to the nearest tabstop
 
 " Cursor motion
-set scrolloff=3
+set scrolloff=5
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
@@ -217,6 +228,8 @@ set laststatus=2    " last window always has a status line
 
 " Last line
 set showmode
+
+" show incomplete commands
 set showcmd
 
 " set clipboard to easily copy from vim and paste into OSx
