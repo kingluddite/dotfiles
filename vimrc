@@ -213,6 +213,12 @@ nnoremap zz :update<cr>
 nmap <c-k> ddkP
 nmap <c-j> ddp
 
+" alt splits on Mac
+nmap ˙ <C-w><Left>
+map ∆  <C-w><Down>
+nmap ˚ <C-w><Up> 
+nmap ¬ <C-w><Right>
+
 " Bubble multiple lines
 vmap <c-k> xkP`[V`]
 vmap <c-j> xp`[V`]
@@ -268,7 +274,8 @@ inoremap {<CR> {<CR>}<ESC>0
 " easy navigation in split windows
 nnoremap <C-L> <C-W><C-L> " focus on left
 nnoremap <C-H> <C-W><C-H> " focus on right
-
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
 " Textmate holdouts
 
 " Formatting
