@@ -286,6 +286,7 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+nmap <leader>ne :NERDTree<CR>
 
 " Disable arrow keys to get better at vim
 noremap <Up> <NOP>
