@@ -72,6 +72,7 @@ let mapleader = "\<Space>" " yep - the space bar is my leader key
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 " helppage -> :h vimwiki-syntax
 
+
 " vim-instant-markdown - Instant Markdown previews from Vim
 " https://github.com/suan/vim-instant-markdown
 let g:instant_markdown_autostart = 0	" disable autostart
@@ -215,8 +216,8 @@ nmap <c-j> ddp
 
 " alt splits on Mac
 nmap ˙ <C-w><Left>
-map ∆  <C-w><Down>
-nmap ˚ <C-w><Up> 
+nmap ∆  <C-w><Down>
+nmap ˚ <C-w><Up>
 nmap ¬ <C-w><Right>
 
 " Bubble multiple lines
@@ -271,11 +272,6 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>0
 
-" easy navigation in split windows
-nnoremap <C-L> <C-W><C-L> " focus on left
-nnoremap <C-H> <C-W><C-H> " focus on right
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
 " Textmate holdouts
 
 " Formatting
