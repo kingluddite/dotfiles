@@ -224,6 +224,10 @@ nmap ¬ <C-w><Right>
 vmap <c-k> xkP`[V`]
 vmap <c-j> xp`[V`]
 
+" easy navigation in split windows
+nnoremap <C-L> <C-W><C-L> " focus on left
+nnoremap <C-H> <C-W><C-H> " focus on right
+
 " Allow hidden buffers
 set hidden
 
