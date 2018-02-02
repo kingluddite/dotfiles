@@ -72,7 +72,6 @@ let mapleader = "\<Space>" " yep - the space bar is my leader key
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 " helppage -> :h vimwiki-syntax
 
-
 " vim-instant-markdown - Instant Markdown previews from Vim
 " https://github.com/suan/vim-instant-markdown
 let g:instant_markdown_autostart = 0	" disable autostart
@@ -211,18 +210,18 @@ nnoremap <s-tab> za
 nnoremap zz :update<cr>
 
 " Bubble single lines
-nmap <c-k> ddkP
-nmap <c-j> ddp
+"nmap <c-k> ddkP
+"nmap <c-j> ddp
 
 " alt splits on Mac
-nmap ˙ <C-w><Left>
-nmap ∆  <C-w><Down>
-nmap ˚ <C-w><Up>
-nmap ¬ <C-w><Right>
+" nmap ˙ <C-w><Left>
+" nmap ∆  <C-w><Down>
+" nmap ˚ <C-w><Up>
+" nmap ¬ <C-w><Right>
 
 " Bubble multiple lines
-vmap <c-k> xkP`[V`]
-vmap <c-j> xp`[V`]
+"vmap <c-k> xkP`[V`]
+"vmap <c-j> xp`[V`]
 
 " easy navigation in split windows
 nnoremap <C-L> <C-W><C-L> " focus on left
@@ -259,8 +258,8 @@ set showmatch
 map <leader><space> :let @/=''<cr> " clear search
 
 "make < > shifts keep selection
-vnoremap < <gv
-vnoremap > >gv
+"vnoremap < <gv
+"vnoremap > >gv
 
 " Remap help key.
 inoremap <F1> <ESC>:set invfullscreen<CR>a
@@ -312,10 +311,8 @@ set background=dark
 "let g:solarized_termtrans=1
 
 " Make sure ctrlp ignores this stuff
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
-" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-" in ~/.vim/colors/ and uncomment:
 " colorscheme solarized
 " my theme
 syntax on
