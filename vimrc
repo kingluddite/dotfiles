@@ -223,6 +223,12 @@ nnoremap zz :update<cr>
 "vmap <c-k> xkP`[V`]
 "vmap <c-j> xp`[V`]
 
+" easy nav through screens with hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " easy navigation in split windows
 nnoremap <C-L> <C-W><C-L> " focus on left
 nnoremap <C-H> <C-W><C-H> " focus on right
