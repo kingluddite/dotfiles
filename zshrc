@@ -16,7 +16,7 @@ ZSH_THEME="cobalt2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo alias-tips sh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sudo alias-tips sh-autosuggestions osx zsh-syntax-highlighting)
 
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
@@ -102,7 +102,7 @@ git_custom_status() {
 
 # VI Mode
 bindkey -v
-
+bindkey -M viins ‘jk’ vi-cmd-mode # jk takes you to cmd mode!
 bindkey '^P' up-history
 bindkey '^N' down-history
 bindkey '^?' backward-delete-char
