@@ -160,25 +160,38 @@ export HISTIGNORE="h"
 # ====================
 # Git
 # ====================
-alias gs='git status'
+alias ga='git add'
+
+# --patch (Interactively choose hunks of patch between the index and the work tree and add them to the index. This gives the user a chance to review the difference before adding modified contents to the index).
 alias gap='git add -p'
-alias ga='git add '
+
+# --intent-to-add (This is useful for showing the unstaged content of such files with git diff and committing them with git commit -a).
+alias gnap='git add -N . && git add -p' 
+alias gs='git status'
 alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
+alias gc='git commit -v'
+alias gcm='git commit -m'
+alias gd='git diff --color-words'
 alias go='git checkout '
 alias gob='git checkout -b '
 alias gk='gitk --all&'
 alias gx='gitx --all'
+alias gco='git checkout'
 alias glog='git log --pretty=oneline --abbrev-commit'
+alias glod='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
 alias gitl='git log --pretty=oneline'
 alias lgl='git log --oneline --decorate'
-alias gpush='git push origin master'
-alias gpull='git pull origin master'
 alias up='git pull upstream master'
 # when I mispell git commands the following 2 commands help
 alias got='git '
 alias get='git '
+
+alias commit_count="git shortlog -n -s --no-merges"
+alias gpush='git push origin master'
+alias gpull='git pull origin master'
+alias gstat='git status'
+alias gcam='git commit -a -m'
+alias gitclean='git checkout master && git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
 
 # Sublime Text and ZSH
 alias zash='sublime ~/.zshrc' # open zshrc in sublime
