@@ -22,9 +22,22 @@ alias fpid5='lsof -i:5858'
 alias md='mkdir'
 ## (tip) falias + "word to search for"
 alias falias='alias | grep ' # search all aliases (Jacob!)
+
+# =================
+# Shell
+# =================
 # List file information
-alias ls='ls -laF'  # show slashes for directories
-alias ll='ls -la'   # long list format (inc hidden files/unit size)
+alias la="ls -alFGgohq"
+alias vi='vim'
+# fancy ls command
+  # -l  long format
+  # -F  / after dirs, * after exe, @ after symlink
+  # -G  colorize
+  # -g suppress owner
+  # -o suppress group
+  # -h humanize sizes
+  # -q print nongraphic chars as question marks
+alias ll="ls -lFGgohq"
 alias h='history'   # lists your previously entered commands
 
 # Recursively remove .DS_Store files
