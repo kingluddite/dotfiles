@@ -32,6 +32,19 @@ alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Empty trash
 alias etrash='rm -rf ~/.Trash/*'
+
+# =================
+# Spotify
+# =================
+alias sp="spotify play"
+alias sps="spotify play && spotify status"
+alias spa="spotify pause"
+alias svu="spotify vol up"
+alias svd="spotify vol down"
+alias sv="spotify vol"
+alias ss="spotify status"
+alias sn="spotify next"
+alias schill="spotify play uri spotify:user:spotify:playlist:37i9dQZF1DWZeKCadgRdKQ"
 # =================
 # dotfiles Aliases
 # =================
