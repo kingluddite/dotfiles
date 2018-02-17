@@ -30,6 +30,8 @@ alias h='history'   # lists your previously entered commands
 # Recursively remove .DS_Store files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 
+# Empty trash
+alias etrash='rm -rf ~/.Trash/*'
 # =================
 # dotfiles Aliases
 # =================
