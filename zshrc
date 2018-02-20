@@ -16,7 +16,7 @@ ZSH_THEME="cobalt2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo alias-tips sh-autosuggestions osx zsh-syntax-highlighting)
+plugins=(git sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
 
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
@@ -30,10 +30,10 @@ export PATH=$PATH:/Users/philiphowley/.npm-packages/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 ## MAMP stuff
-#PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-#export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 # MAMP and MYSQL
-#export PATH="/Applications/MAMP/Library/bin:$PATH"
+export PATH="/Applications/MAMP/Library/bin:$PATH"
 
 # --- not sure where this goes yet???
 # z - frecent (made up word but this is cool!)
@@ -43,9 +43,6 @@ export PATH=$PATH:/Users/philiphowley/.npm-packages/bin
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.functions
-
-# autosuggest for zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ## Your default theme (not sure about this yet)
 # source "$HOME/dotfiles/custom/themes/spaceship.zsh-theme" # our theme
