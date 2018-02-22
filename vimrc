@@ -124,8 +124,12 @@ nmap <leader>d <Plug>(ale_fix)
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
-set wildignore+=*/tmp/*,/dist/*,/node_modules/*,*.so,*.swp,*.zip " to limit ctrlp search
-
+" wildignore yo! --->  limit searches
+set wildignore+=*/tmp/*,/dist/*
+set wildignore+=/node_modules/*,*.so,*.swp,*.zip 
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=.DS_Store,.git,.hg,.svn
+set wildignore+=*~,*.swp,*.swo,*.tmp
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
@@ -316,6 +320,7 @@ set background=dark
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
 
+" Ctrl-P Yo!
 " Make sure ctrlp ignores this stuff
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
