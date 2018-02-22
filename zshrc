@@ -30,10 +30,10 @@ export PATH=$PATH:/Users/philiphowley/.npm-packages/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 ## MAMP stuff
-#PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-#export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 # MAMP and MYSQL
-#export PATH="/Applications/MAMP/Library/bin:$PATH"
+export PATH="/Applications/MAMP/Library/bin:$PATH"
 
 # --- not sure where this goes yet???
 # z - frecent (made up word but this is cool!)
@@ -47,10 +47,6 @@ source $HOME/.functions
 ## Your default theme (not sure about this yet)
 # source "$HOME/dotfiles/custom/themes/spaceship.zsh-theme" # our theme
 # source "$HOME/dotfiles/custom/themes/cobalt2.zsh-theme" # our theme
-
-# Key Bindings
-bindkey '^u' autosuggest-accept
-bindkey '`' autosuggest-accept
 
 # Show different symbols as appropriate for various Git repository states
 parse_git_state() {
