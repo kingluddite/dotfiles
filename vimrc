@@ -24,6 +24,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'tomtom/tcomment_vim'
     Plug 'chun-yang/auto-pairs'
     Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'tacahiroy/ctrlp-funky'
     Plug 'w0rp/ale'
     Plug 'dsimidzija/vim-nerdtree-ignore'
     Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
@@ -323,6 +324,9 @@ set background=dark
 " Ctrl-P Yo!
 " Make sure ctrlp ignores this stuff
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+" Ctrl-P Funky
+nnoremap <Leader>fu :CtrlPFunky<Cr>
 
 " colorscheme solarized
 " my theme
