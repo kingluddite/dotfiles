@@ -30,10 +30,10 @@ export PATH=$PATH:/Users/philiphowley/.npm-packages/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 ## MAMP stuff
-PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+#PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+#export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 # MAMP and MYSQL
-export PATH="/Applications/MAMP/Library/bin:$PATH"
+#export PATH="/Applications/MAMP/Library/bin:$PATH"
 
 # --- not sure where this goes yet???
 # z - frecent (made up word but this is cool!)
@@ -102,8 +102,8 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
-bindkey '^u' autosuggest-accept
-bindkey '`' autosuggest-accept
+# bindkey '^u' autosuggest-accept
+# bindkey '`'  autosuggest-accept
 
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
@@ -114,7 +114,6 @@ function zle-line-init zle-keymap-select {
 function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
-
 zle -N zle-line-init
 zle -N zle-keymap-select
 
