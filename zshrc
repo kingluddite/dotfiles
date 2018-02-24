@@ -114,6 +114,7 @@ function zle-line-init zle-keymap-select {
 function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
+
 zle -N zle-line-init
 zle -N zle-keymap-select
 
