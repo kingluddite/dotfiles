@@ -8,7 +8,7 @@ call plug#begin('~/.vim/bundle')
 " Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'shawncplus/phpcomplete.vim'
-    Plug 'scrooloose/syntastic'
+    " Plug 'scrooloose/syntastic'
     Plug 'prettier/prettier'
     Plug 'tyru/open-browser.vim'
     Plug 'jnurmine/zenburn'
@@ -133,7 +133,7 @@ let g:airline#extensions#ale#enabled = 1
 
 " wildignore yo! --->  limit searches
 set wildignore+=*/tmp/*,/dist/*
-set wildignore+=/node_modules/*,*.so,*.swp,*.zip 
+set wildignore+=/node_modules/*,*.so,*.swp,*.zip
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
 set wildignore+=*~,*.swp,*.swo,*.tmp
