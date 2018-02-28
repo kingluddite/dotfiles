@@ -62,6 +62,7 @@ alias schill="spotify play uri spotify:user:spotify:playlist:37i9dQZF1DWZeKCadgR
 # dotfiles Aliases
 # =================
 alias dotf='cd ~/dotfiles'
+alias tdotf='vim ~/.tmux/tmux.conf'
 
 # =================
 # Server Aliases
@@ -196,6 +197,7 @@ alias gitclean='git checkout master && git branch --merged master | grep -v "\* 
 # Sublime Text and ZSH
 alias zash='sublime ~/.zshrc' # open zshrc in sublime
 alias zfrash='source ~/.zshrc' # refresh zshrc
+alias tfresh='tmux source-file ~/.tmux/tmux.conf'
 
 # Heroku
 alias gph='git push heroku master'
