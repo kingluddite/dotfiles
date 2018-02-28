@@ -7,8 +7,14 @@ call plug#begin('~/.vim/bundle')
 " Keep Plugin commands between plug#begin/end.
 " Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'shawncplus/phpcomplete.vim'
+    Plug 'scrooloose/syntastic'
     Plug 'prettier/prettier'
+    Plug 'tyru/open-browser.vim'
     Plug 'jnurmine/zenburn'
+    Plug 'dsawardekar/wordpress.vim'
+    Plug 'stanangeloff/php.vim'
+    Plug 'tpope/vim-markdown'
     Plug 'mitermayer/vim-prettier'
     Plug 'sirver/ultisnips'
     Plug 'ervandew/supertab' " Must load before youcompleteme
