@@ -6,6 +6,8 @@ eslint-boilerplate(){
   git clone https://github.com/kingluddite/eslint-boilerplate.git . && yarn
 }
 
+function cdl { cd $1; ls;}
+
 # Install `tree` first — brew install tree
 function _t() {
   # Defaults to 3 levels deep, do more with `t 5` or `t 1`
