@@ -94,6 +94,16 @@ git_custom_status() {
 }
 
 # VI Mode
+# navigate zsh tab completion
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+...
+# use the vi navigation keys in menu completion
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
 bindkey -v
 bindkey -M viins ‘jk’ vi-cmd-mode # jk takes you to cmd mode!
 bindkey '^P' up-history
