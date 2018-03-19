@@ -40,6 +40,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'easymotion/vim-easymotion'
     Plug 'ap/vim-css-color'
+    Plug 'leshill/vim-json'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
 call plug#end()            " required
@@ -330,6 +331,9 @@ set background=dark
 " Ctrl-P Yo!
 " Make sure ctrlp ignores this stuff
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+" do not auto-hide quotes
+let g:vim_json_syntax_conceal = 0
 
 " Ctrl-P Funky
 nnoremap <Leader>fu :CtrlPFunky<Cr>
