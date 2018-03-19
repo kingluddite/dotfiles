@@ -41,6 +41,10 @@ call plug#begin('~/.vim/bundle')
     Plug 'easymotion/vim-easymotion'
     Plug 'ap/vim-css-color'
     Plug 'leshill/vim-json'
+    Plug 'chip/vim-fat-finger'
+    Plug 'zirrostig/vim-schlepp'
+    Plug 'gioele/vim-autoswap'
+
 " All of your Plugins must be added before the following line
 " Initialize plugin system
 call plug#end()            " required
@@ -313,10 +317,10 @@ map <C-n> :NERDTreeToggle<CR>
 nmap <leader>ne :NERDTree<CR>
 
 " Disable arrow keys to get better at vim
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
 
 " prettier
 " disable autocomments after first // and then hitting return
@@ -338,10 +342,25 @@ let g:vim_json_syntax_conceal = 0
 " Ctrl-P Funky
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 
+" Damian Conway causes swap files to be rotated every 10
+" strokes (instead of default 200)
+set updatecount=10
+
+" Damian Conway tip always use visual block mode
+nnoremap    v    <C-V>
+nnoremap  <C-V>    v
+
 " colorscheme solarized
 " my theme
 syntax on
 colors zenburn
+
+"schlepp move text stuff
+vmap <unique> <up>    <Plug>SchleppUp
+vmap <unique> <down>  <Plug>SchleppDown
+vmap <unique> <left>  <Plug>SchleppLeft
+vmap <unique> <right> <Plug>SchleppRight
+
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
 " iterm cursor changes depending on mode
