@@ -26,14 +26,19 @@ plugins=(git sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$PATH:/Users/philiphowley/.npm-packages/bin
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:/usr/local/lib/node_modules
+export MANPATH="/usr/local/man:$MANPATH"
+# this is the root folder where all globally installed node packages will  go
+# export NPM_PACKAGES="/usr/local/npm_packages"
+# export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+# add to PATH
+# export PATH="$NPM_PACKAGES/bin:$PATH"
 
 ## MAMP stuff
-PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+# PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+# export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 # MAMP and MYSQL
-export PATH="/Applications/MAMP/Library/bin:$PATH"
+# export PATH="/Applications/MAMP/Library/bin:$PATH"
 
 # --- not sure where this goes yet???
 # z - frecent (made up word but this is cool!)
@@ -97,7 +102,7 @@ git_custom_status() {
 # navigate zsh tab completion
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-...
+
 # use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
