@@ -44,7 +44,9 @@ call plug#begin('~/.vim/bundle')
     Plug 'chip/vim-fat-finger'
     Plug 'zirrostig/vim-schlepp'
     Plug 'gioele/vim-autoswap'
-
+    " React code snippets
+    Plug 'epilande/vim-react-snippets'
+    Plug 'SirVer/ultisnips'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
 call plug#end()            " required
