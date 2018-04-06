@@ -109,6 +109,13 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " This also allows you to <tab> for indentation
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
+" lets emmet use jsx shortcuts
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
+
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
