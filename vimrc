@@ -16,7 +16,6 @@ call plug#begin('~/.vim/bundle')
     Plug 'stanangeloff/php.vim'
     Plug 'tpope/vim-markdown'
     Plug 'mitermayer/vim-prettier'
-    Plug 'sirver/ultisnips'
     Plug 'ervandew/supertab' " Must load before youcompleteme
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
@@ -45,8 +44,8 @@ call plug#begin('~/.vim/bundle')
     Plug 'zirrostig/vim-schlepp'
     Plug 'gioele/vim-autoswap'
     " React code snippets
+    Plug 'sirver/ultisnips'
     Plug 'epilande/vim-react-snippets'
-    Plug 'SirVer/ultisnips'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
 call plug#end()            " required
