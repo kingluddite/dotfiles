@@ -134,9 +134,9 @@ let g:ale_fixers['javascript'] = [
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
 
-" let g:ale_linters = {
-"   \ 'javascript': ['stylelint', 'eslint'],
-"   \}
+let g:ale_linters = {
+  \ 'javascript': ['stylelint', 'eslint'],
+  \}
 
 " shortcut to run :ALEFix (<space>d)
 nmap <leader>d <Plug>(ale_fix)
