@@ -647,8 +647,16 @@
 	<string>CFF1E3C7-6079-4DBD-B5C6-0D11EF21ABFA</string>
 	<key>DimBackgroundWindows</key>
 	<true/>
+	<key>Hotkey</key>
+	<true/>
+	<key>HotkeyChar</key>
+	<integer>27</integer>
+	<key>HotkeyCode</key>
+	<integer>53</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>HotkeyModifiers</key>
+	<integer>1048840</integer>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -698,11 +706,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 94 599 501 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>148 146 796 473 0 0 1440 877 </string>
+	<string>148 156 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 0 714 877 0 0 1440 877 </string>
+	<string>723 0 714 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 131 890 600 0 0 1440 877 </string>
+	<string>0 153 890 577 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>118 17 890 577 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -2718,7 +2726,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-14T22:08:03Z</date>
+	<date>2018-04-17T18:35:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
