@@ -3,6 +3,8 @@
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias domt='cd /Users/philiphowley/Sites/local.domsters.com/wp-content/themes/domsters-static-theme'
+alias domw='/Users/philiphowley/Sites/local.domsters.com'
 # =================
 # School Aliases
 # =================
