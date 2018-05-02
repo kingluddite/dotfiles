@@ -703,12 +703,14 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>674 213 597 77 0 0 1440 877 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 94 599 501 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>148 156 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>723 0 714 877 0 0 1440 877 </string>
+	<string>734 23 703 854 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 153 890 577 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2726,14 +2728,16 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-17T18:35:34Z</date>
+	<date>2018-04-23T16:55:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SuppressRestartAnnouncement</key>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.6</string>
 </dict>
 </plist>
