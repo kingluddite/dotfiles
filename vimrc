@@ -43,6 +43,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'chip/vim-fat-finger'
     Plug 'zirrostig/vim-schlepp'
     Plug 'gioele/vim-autoswap'
+    Plug 'kewah/vim-stylefmt'    
     " React code snippets
     Plug 'sirver/ultisnips'
     Plug 'epilande/vim-react-snippets'
