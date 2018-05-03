@@ -43,6 +43,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'chip/vim-fat-finger'
     Plug 'zirrostig/vim-schlepp'
     Plug 'gioele/vim-autoswap'
+    Plug 'kewah/vim-stylefmt'    
     " React code snippets
     Plug 'sirver/ultisnips'
     Plug 'epilande/vim-react-snippets'
@@ -115,6 +116,8 @@ let g:user_emmet_settings = {
 \  },
 \}
 
+nnoremap <silent> <leader>cs :Stylefmt<CR>
+vnoremap <silent> <leader>cs :StylefmtVisual<CR>
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
@@ -364,10 +367,10 @@ syntax on
 colors zenburn
 
 "schlepp move text stuff
-vmap <unique> <up>    <Plug>SchleppUp
-vmap <unique> <down>  <Plug>SchleppDown
-vmap <unique> <left>  <Plug>SchleppLeft
-vmap <unique> <right> <Plug>SchleppRight
+" vmap <unique> <up>    <Plug>SchleppUp
+" vmap <unique> <down>  <Plug>SchleppDown
+" vmap <unique> <left>  <Plug>SchleppLeft
+" vmap <unique> <right> <Plug>SchleppRight
 
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
