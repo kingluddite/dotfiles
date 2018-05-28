@@ -35,10 +35,10 @@ export MANPATH="/usr/local/man:$MANPATH"
 # export PATH="$NPM_PACKAGES/bin:$PATH"
 
 ## MAMP stuff
-PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+# PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+# export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 # MAMP and MYSQL
-export PATH="/Applications/MAMP/Library/bin:$PATH"
+# export PATH="/Applications/MAMP/Library/bin:$PATH"
 
 # --- not sure where this goes yet???
 # z - frecent (made up word but this is cool!)

@@ -103,11 +103,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
-" inoremap <Tab> <c-r>=UltiSnips#ExpandSnippet()<cr>
+inoremap <Tab> <c-r>=UltiSnips#ExpandSnippet()<cr>
 
-" Using tab as abbreviation for emmet
-" This also allows you to <tab> for indentation
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " lets emmet use jsx shortcuts
 let g:user_emmet_settings = {
@@ -115,6 +112,11 @@ let g:user_emmet_settings = {
 \      'extends' : 'jsx',
 \  },
 \}
+
+" Using tab as abbreviation for emmet
+" This also allows you to <tab> for indentation
+" let g:user_emmet_expandabbr_key='<Tab>'
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 nnoremap <silent> <leader>cs :Stylefmt<CR>
 vnoremap <silent> <leader>cs :StylefmtVisual<CR>
@@ -221,6 +223,7 @@ set scrolloff=5
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
+
 
 " Edit the vimrc file
 nmap <silent> ,ev :e $MYVIMRC<CR>
