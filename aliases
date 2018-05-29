@@ -6,6 +6,8 @@
 alias domt='cd ~/Sites/local.domsters.com/wp-content/themes/domsters-static-theme'
 alias domw='~/Sites/local.domsters.com'
 alias ics='cd ~/Documents/dev/ics/ics-gatsby-website'
+alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
+
 # =================
 # School Aliases
 # =================
