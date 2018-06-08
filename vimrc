@@ -72,7 +72,8 @@ set wildmenu
 set backup
 " tell vim where to put its backup files
 set backupdir=/tmp
-
+" tell vim where to put swap files
+set dir=/tmp
 
 if has("gui_running")
    let s:uname = system("uname")
