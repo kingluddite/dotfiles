@@ -70,7 +70,9 @@ set wildmenu
 
 " create backups
 set backup
-" set bex=SOMETHING
+" tell vim where to put its backup files
+set backupdir=/tmp
+
 
 if has("gui_running")
    let s:uname = system("uname")
@@ -363,6 +365,7 @@ set updatecount=10
 " Damian Conway tip always use visual block mode
 nnoremap    v    <C-V>
 nnoremap  <C-V>    v
+
 
 " colorscheme solarized
 " my theme
