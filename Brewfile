@@ -38,14 +38,14 @@ brew 'cmake'
 # brew 'wget'
 
 # Development
-brew 'php71'
-brew 'php71-intl'
-brew 'php71-imagick'
-brew 'mcrypt'
-brew 'php71-mcrypt'
-brew 'composer' # Remember to update $PATH in .zshrc
-export PATH="$HOME/.npm-packages/bin:$(brew --prefix homebrew/php/php70)/bin:$PATH"
-brew 'mariadb'
+# brew 'php71'
+# brew 'php71-intl'
+#brew 'php71-imagick'
+# brew 'mcrypt'
+# brew 'php71-mcrypt'
+# brew 'composer' # Remember to update $PATH in .zshrc
+# export PATH="$HOME/.npm-packages/bin:$(brew --prefix homebrew/php/php70)/bin:$PATH"
+# brew 'mariadb'
 brew 'ssh-copy-id'
 brew 'tmux'
 brew 'wget'
@@ -55,6 +55,7 @@ brew 'zsh'
 cask 'alfred'
 cask 'iterm2'
 cask 'sublime-text'
+cask 'visual-studio-code'
 cask 'slack'
 cask 'mac2imgur'
 # cask 'Caskroom/cask/karabiner-elements'

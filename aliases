@@ -5,7 +5,10 @@
 
 alias domt='cd ~/Sites/local.domsters.com/wp-content/themes/domsters-static-theme'
 alias domw='~/Sites/local.domsters.com'
+
+alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
 alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
+
 # =================
 # School Aliases
 # =================
@@ -176,7 +179,7 @@ alias gcm='git checkout master'
 alias gap='git add -p'
 
 # --intent-to-add (This is useful for showing the unstaged content of such files with git diff and committing them with git commit -a).
-alias gnap='git add -N . && git add -p' 
+alias gnap='git add -N . && git add -p'
 alias gs='git status'
 alias gb='git branch '
 alias gc='git commit -v'
