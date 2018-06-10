@@ -7,22 +7,20 @@ call plug#begin('~/.vim/bundle')
 " Keep Plugin commands between plug#begin/end.
 " Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-    Plug 'shawncplus/phpcomplete.vim'
-    " Plug 'scrooloose/syntastic'
     Plug 'prettier/prettier'
     Plug 'tyru/open-browser.vim'
     Plug 'jnurmine/zenburn'
-    Plug 'dsawardekar/wordpress.vim'
     Plug 'stanangeloff/php.vim'
-    Plug 'tpope/vim-markdown'
+    "Plug 'tpope/vim-markdown'
     Plug 'mitermayer/vim-prettier'
-    Plug 'ervandew/supertab' " Must load before youcompleteme
+"    Plug 'ervandew/supertab' " Must load before youcompleteme
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'pangloss/vim-javascript'
-    Plug 'chemzqm/vim-jsx-improve' " jsx support
+    Plug 'mxw/vim-jsx'
+"    Plug 'chemzqm/vim-jsx-improve' " jsx support
     Plug 'marijnh/tern_for_vim'
-    Plug 'valloric/youcompleteme'
+"    Plug 'valloric/youcompleteme'
     Plug 'tpope/vim-surround'
     Plug 'easymotion/vim-easymotion'
     Plug 'mattn/emmet-vim'
@@ -32,11 +30,11 @@ call plug#begin('~/.vim/bundle')
     Plug 'tacahiroy/ctrlp-funky'
     Plug 'w0rp/ale'
     Plug 'dsimidzija/vim-nerdtree-ignore'
-    Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
+    "Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
     Plug 'ryanoasis/vim-devicons'
     Plug 'vimwiki/vimwiki'
-    Plug 'bling/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    "Plug 'bling/vim-airline'
+    "Plug 'vim-airline/vim-airline-themes'
     Plug 'easymotion/vim-easymotion'
     Plug 'ap/vim-css-color'
     Plug 'leshill/vim-json'
@@ -45,7 +43,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'gioele/vim-autoswap'
     Plug 'kewah/vim-stylefmt'    
     " React code snippets
-    Plug 'sirver/ultisnips'
+    "Plug 'sirver/ultisnips'
     Plug 'epilande/vim-react-snippets'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
@@ -68,6 +66,7 @@ set history=1000
 " shows a menu when using tab completion
 set wildmenu
 
+" deal with swps and backups here
 " create backups
 set backup
 " tell vim where to put its backup files
@@ -86,35 +85,42 @@ endif
 let mapleader = "\<Space>" " yep - the space bar is my leader key
 
 " vimwiki with markdown support
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+" let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 " helppage -> :h vimwiki-syntax
 
 " vim-instant-markdown - Instant Markdown previews from Vim
 " https://github.com/suan/vim-instant-markdown
-let g:instant_markdown_autostart = 0	" disable autostart
-map <leader>md :InstantMarkdownPreview<CR>
+" let g:instant_markdown_autostart = 0	" disable autostart
+" map <leader>md :InstantMarkdownPreview<CR>
 
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+"inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
-inoremap <Tab> <c-r>=UltiSnips#ExpandSnippet()<cr>
+"inoremap <Tab> <c-r>=UltiSnips#ExpandSnippet()<cr>
 
 
 " lets emmet use jsx shortcuts
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab")
 let g:user_emmet_settings = {
 \  'javascript' : {
 \      'extends' : 'jsx',
 \  },
 \}
+
+let g:jsx_ext_required = 0
+
+
+autocmd FileType html,css.javascript.jsx EmmetInstall
 
 " Using tab as abbreviation for emmet
 " This also allows you to <tab> for indentation
@@ -123,8 +129,9 @@ let g:user_emmet_settings = {
 
 nnoremap <silent> <leader>cs :Stylefmt<CR>
 vnoremap <silent> <leader>cs :StylefmtVisual<CR>
+
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsEditSplit="vertical"
 
 " ESLint through Vim
 " Fix eslint on save
@@ -346,8 +353,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Color scheme (terminal)
 set t_Co=256
 set background=dark
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
 
 " Ctrl-P Yo!
 " Make sure ctrlp ignores this stuff
@@ -372,12 +377,6 @@ nnoremap  <C-V>    v
 " my theme
 syntax on
 colors zenburn
-
-"schlepp move text stuff
-" vmap <unique> <up>    <Plug>SchleppUp
-" vmap <unique> <down>  <Plug>SchleppDown
-" vmap <unique> <left>  <Plug>SchleppLeft
-" vmap <unique> <right> <Plug>SchleppRight
 
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
