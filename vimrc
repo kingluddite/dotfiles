@@ -110,7 +110,7 @@ let mapleader = "\<Space>" " yep - the space bar is my leader key
 
 " lets emmet use jsx shortcuts
 let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab")
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:user_emmet_settings = {
 \  'javascript' : {
 \      'extends' : 'jsx',
