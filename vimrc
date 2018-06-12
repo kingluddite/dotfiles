@@ -17,7 +17,6 @@ call plug#begin('~/.vim/bundle')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
     Plug 'pangloss/vim-javascript'
-    Plug 'mxw/vim-jsx'
 "    Plug 'chemzqm/vim-jsx-improve' " jsx support
     Plug 'marijnh/tern_for_vim'
 "    Plug 'valloric/youcompleteme'
@@ -43,7 +42,12 @@ call plug#begin('~/.vim/bundle')
     Plug 'gioele/vim-autoswap'
     Plug 'kewah/vim-stylefmt'    
     " React code snippets
-    "Plug 'sirver/ultisnips'
+    " ES2015 code snippets 
+    Plug 'epilande/vim-es2015-snippets'
+    " React code snippets
+    Plug 'epilande/vim-react-snippets'
+    Plug 'mxw/vim-jsx'
+    Plug 'sirver/ultisnips'
     Plug 'epilande/vim-react-snippets'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
@@ -107,6 +111,8 @@ let mapleader = "\<Space>" " yep - the space bar is my leader key
 
 "inoremap <Tab> <c-r>=UltiSnips#ExpandSnippet()<cr>
 
+" Trigger react snippets
+"let g:UltiSnipsExpandTrigger="<C-L>"
 
 " lets emmet use jsx shortcuts
 let g:user_emmet_expandabbr_key='<Tab>'
