@@ -43,12 +43,11 @@ call plug#begin('~/.vim/bundle')
     Plug 'kewah/vim-stylefmt'    
     " React code snippets
     " ES2015 code snippets 
-    Plug 'epilande/vim-es2015-snippets'
+"    Plug 'epilande/vim-es2015-snippets'
     " React code snippets
-    Plug 'epilande/vim-react-snippets'
     Plug 'mxw/vim-jsx'
-    Plug 'sirver/ultisnips'
-    Plug 'epilande/vim-react-snippets'
+"    Plug 'sirver/ultisnips'
+"    Plug 'epilande/vim-react-snippets'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
 call plug#end()            " required
