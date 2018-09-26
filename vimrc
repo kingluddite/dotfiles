@@ -126,7 +126,7 @@ let g:user_emmet_settings = {
 let g:jsx_ext_required = 0
 
 
-autocmd FileType html,css.javascript.jsx EmmetInstall
+autocmd FileType html,css,javascript.jsx EmmetInstall
 
 " Using tab as abbreviation for emmet
 " This also allows you to <tab> for indentation
