@@ -41,6 +41,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'zirrostig/vim-schlepp'
     Plug 'gioele/vim-autoswap'
     Plug 'kewah/vim-stylefmt'    
+    Plug 'jparise/vim-graphql'
     " React code snippets
     " ES2015 code snippets 
 "    Plug 'epilande/vim-es2015-snippets'
