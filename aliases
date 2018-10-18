@@ -3,9 +3,6 @@
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias domt='cd ~/Sites/local.domsters.com/wp-content/themes/domsters-static-theme'
-alias domw='~/Sites/local.domsters.com'
-
 alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
 alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
 
@@ -16,16 +13,20 @@ alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
 # alias et='cd ~/Documents/dev/classes/gwda313/2016/summer/'
 
 # =================
-# Custom Aliases
-# =================
-alias domt='cd ~/Sites/local.domsters.com/wp-content/themes/domsters-static-theme'
-alias domw='cd ~/Sites/local.domsters.com'
-# =================
 # Node Aliases
 # =================
 alias kll='kill -9'
 alias fpid3='lsof -i:3000'
 alias fpid5='lsof -i:5858'
+alias mls='lsof -Pi | grep LISTEN'
+
+# =================
+# Client Aliases
+# =================
+alias beth='~/VVV/www/bethrohde/public_html/'
+alias story='~/VVV/www/storeytimeonline/public_html/'
+alias matt='~/VVV/www/mattrohde/public_html/'
+alias rwb='~/VVV/www/rwbmusicservices/public_html/'
 
 # =================
 # Workflow Aliases
