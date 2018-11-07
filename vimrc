@@ -55,6 +55,16 @@ call plug#end()            " required
 
 filetype plugin indent on    " (required) activates indenting for files
 
+
+" speed up vim
+let loaded_matchparen=1 " Don't load matchit.vim (paren/bracket matching)
+set noshowmatch         " Don't match parentheses/brackets
+set nocursorline        " Don't paint cursor line
+set nocursorcolumn      " Don't paint cursor column
+set lazyredraw          " Wait to redraw
+set scrolljump=8        " Scroll 8 lines at a time at bottom/top
+let html_no_rendering=1 " Don't render italic, bold, links in HTML
+
 " add Powerline font
 " set guifont=Inconsolata\ for\Powerline:h15
 set guifont=Fira\ Code:h12
@@ -378,6 +388,10 @@ set updatecount=10
 nnoremap    v    <C-V>
 nnoremap  <C-V>    v
 
+" speed vim up
+" https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " colorscheme solarized
 " my theme
