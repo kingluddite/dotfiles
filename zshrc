@@ -140,6 +140,6 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 prompt_dir() {
-    prompt_segment blue black "%-53<...<%~%<<"
+    prompt_segment blue black "%$(( $COLUMNS - 61 ))<...<%3~%<<"
 }
 export KEYTIMEOUT=1
