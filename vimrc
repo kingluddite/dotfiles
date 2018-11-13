@@ -5,50 +5,50 @@ filetype off                  " required
 call plug#begin('~/.vim/bundle')
 
 " Keep Plugin commands between plug#begin/end.
-" Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+    " Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-    Plug 'prettier/prettier'
-    Plug 'tyru/open-browser.vim'
+    " Plug 'prettier/prettier'
+    " Plug 'tyru/open-browser.vim'
     Plug 'jnurmine/zenburn'
-    Plug 'stanangeloff/php.vim'
+    " Plug 'stanangeloff/php.vim'
     "Plug 'tpope/vim-markdown'
     Plug 'mitermayer/vim-prettier'
-"   Plug 'ervandew/supertab' " Must load before youcompleteme
-    Plug 'tpope/vim-fugitive'
- "   Plug 'airblade/vim-gitgutter' (super slow!)
-    Plug 'pangloss/vim-javascript'
-"    Plug 'chemzqm/vim-jsx-improve' " jsx support
-    Plug 'marijnh/tern_for_vim'
-"    Plug 'valloric/youcompleteme'
-    Plug 'tpope/vim-surround'
-    Plug 'easymotion/vim-easymotion'
+    " Plug 'ervandew/supertab' " Must load before youcompleteme
+    " Plug 'tpope/vim-fugitive'
+    " Plug 'airblade/vim-gitgutter' (super slow!)
+    " Plug 'pangloss/vim-javascript'
+    " Plug 'chemzqm/vim-jsx-improve' " jsx support
+    " Plug 'marijnh/tern_for_vim'
+    " Plug 'valloric/youcompleteme'
+    " Plug 'tpope/vim-surround'
+    " Plug 'easymotion/vim-easymotion'
     Plug 'mattn/emmet-vim'
     Plug 'tomtom/tcomment_vim'
-    Plug 'chun-yang/auto-pairs'
+    " Plug 'chun-yang/auto-pairs'
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'tacahiroy/ctrlp-funky'
+    " Plug 'tacahiroy/ctrlp-funky'
     Plug 'w0rp/ale'
-    Plug 'dsimidzija/vim-nerdtree-ignore'
-    "Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
-    Plug 'ryanoasis/vim-devicons'
-    "Plug 'vimwiki/vimwiki'
-    "Plug 'bling/vim-airline'
-    "Plug 'vim-airline/vim-airline-themes'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'ap/vim-css-color'
-    Plug 'leshill/vim-json'
-    Plug 'chip/vim-fat-finger'
-    Plug 'zirrostig/vim-schlepp'
+    " Plug 'dsimidzija/vim-nerdtree-ignore'
+    " Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
+    " Plug 'ryanoasis/vim-devicons'
+    " Plug 'vimwiki/vimwiki'
+    " Plug 'bling/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
+    " Plug 'easymotion/vim-easymotion'
+    " Plug 'ap/vim-css-color'
+    " Plug 'leshill/vim-json'
+    " Plug 'chip/vim-fat-finger'
+    " Plug 'zirrostig/vim-schlepp'
     Plug 'gioele/vim-autoswap'
-    Plug 'kewah/vim-stylefmt'    
+    " Plug 'kewah/vim-stylefmt'    
     Plug 'jparise/vim-graphql'
     " React code snippets
     " ES2015 code snippets 
-"    Plug 'epilande/vim-es2015-snippets'
+    " Plug 'epilande/vim-es2015-snippets'
     " React code snippets
     Plug 'mxw/vim-jsx'
-"    Plug 'sirver/ultisnips'
-"    Plug 'epilande/vim-react-snippets'
+    " Plug 'sirver/ultisnips'
+    " Plug 'epilande/vim-react-snippets'
 " All of your Plugins must be added before the following line
 " Initialize plugin system
 call plug#end()            " required
