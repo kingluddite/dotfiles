@@ -12,17 +12,17 @@ ZSH_THEME="cobalt2"
 # SPACESHIP_BATTERY_ALWAYS_SHOW=false
 
 # Android stuff
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # --- Plugins
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
+plugins=(sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
 
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
