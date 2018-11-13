@@ -1,6 +1,6 @@
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 
-filetype off                  " required
+"filetype off                  " required
 
 call plug#begin('~/.vim/bundle')
 
@@ -24,7 +24,7 @@ call plug#begin('~/.vim/bundle')
     " Plug 'easymotion/vim-easymotion'
     Plug 'mattn/emmet-vim'
     Plug 'tomtom/tcomment_vim'
-    " Plug 'chun-yang/auto-pairs'
+    Plug 'chun-yang/auto-pairs'
     Plug 'ctrlpvim/ctrlp.vim'
     " Plug 'tacahiroy/ctrlp-funky'
     Plug 'w0rp/ale'
