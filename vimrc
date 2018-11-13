@@ -31,7 +31,7 @@ call plug#begin('~/.vim/bundle')
     Plug 'dsimidzija/vim-nerdtree-ignore'
     "Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
     Plug 'ryanoasis/vim-devicons'
-    Plug 'vimwiki/vimwiki'
+    "Plug 'vimwiki/vimwiki'
     "Plug 'bling/vim-airline'
     "Plug 'vim-airline/vim-airline-themes'
     Plug 'easymotion/vim-easymotion'
