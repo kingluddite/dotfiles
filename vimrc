@@ -13,9 +13,9 @@ call plug#begin('~/.vim/bundle')
     Plug 'stanangeloff/php.vim'
     "Plug 'tpope/vim-markdown'
     Plug 'mitermayer/vim-prettier'
-"    Plug 'ervandew/supertab' " Must load before youcompleteme
+"   Plug 'ervandew/supertab' " Must load before youcompleteme
     Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
+ "   Plug 'airblade/vim-gitgutter' (super slow!)
     Plug 'pangloss/vim-javascript'
 "    Plug 'chemzqm/vim-jsx-improve' " jsx support
     Plug 'marijnh/tern_for_vim'
