@@ -143,3 +143,14 @@ prompt_dir() {
     prompt_segment blue black "%$(( $COLUMNS - 61 ))<...<%3~%<<"
 }
 export KEYTIMEOUT=1
+if [ "$_Z_NO_RESOLVE_SYMLINKS" ]; then
+    _z_precmd() {
+        (_z --add "${PWD:a}" &)
+		: $RANDOM
+    }
+else
+    _z_precmd() {
+        (_z --add "${PWD:A}" &)
+		: $RANDOM
+    }
+fi
