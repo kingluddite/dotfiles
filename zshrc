@@ -60,49 +60,49 @@ source $HOME/.functions
 # source "$HOME/dotfiles/custom/themes/cobalt2.zsh-theme" # our theme
 
 # Show different symbols as appropriate for various Git repository states
-parse_git_state() {
-
-  # Compose this value via multiple conditional appends.
-  local GIT_STATE=""
-
-  local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
-  if [ "$NUM_AHEAD" -gt 0 ]; then
-    GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
-  fi
-
-  local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
-  if [ "$NUM_BEHIND" -gt 0 ]; then
-    GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
-  fi
-
-  local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
-  if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_MERGING
-  fi
-
-  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
-  fi
-
-  if ! git diff --quiet 2> /dev/null; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_MODIFIED
-  fi
-
-  if ! git diff --cached --quiet 2> /dev/null; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
-  fi
-
-  if [[ -n $GIT_STATE ]]; then
-    echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
-  fi
-
-}
+# parse_git_state() {
+#
+#   # Compose this value via multiple conditional appends.
+#   local GIT_STATE=""
+#
+#   local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
+#   if [ "$NUM_AHEAD" -gt 0 ]; then
+#     GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
+#   fi
+#
+#   local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
+#   if [ "$NUM_BEHIND" -gt 0 ]; then
+#     GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
+#   fi
+#
+#   local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
+#   if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
+#     GIT_STATE=$GIT_STATE$GIT_PROMPT_MERGING
+#   fi
+#
+#   if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+#     GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
+#   fi
+#
+#   if ! git diff --quiet 2> /dev/null; then
+#     GIT_STATE=$GIT_STATE$GIT_PROMPT_MODIFIED
+#   fi
+#
+#   if ! git diff --cached --quiet 2> /dev/null; then
+#     GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
+#   fi
+#
+#   if [[ -n $GIT_STATE ]]; then
+#     echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
+#   fi
+#
+# }
 
 # If inside a Git repository, print its branch and state
-git_custom_status() {
-  local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
-}
+# git_custom_status() {
+#   local git_where="$(parse_git_branch)"
+#   [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
+# }
 
 # VI Mode
 # navigate zsh tab completion
@@ -126,15 +126,15 @@ bindkey '^r' history-incremental-search-backward
 # bindkey '^u' autosuggest-accept
 bindkey '`'  autosuggest-accept
 
-function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}$(git_custom_status) $EPS1"
-    zle reset-prompt
-}
+# function zle-line-init zle-keymap-select {
+#     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+#     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}$(git_custom_status) $EPS1"
+#     zle reset-prompt
+# }
 
-function parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
-}
+# function parse_git_branch() {
+#   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+# }
 
 zle -N zle-line-init
 zle -N zle-keymap-select
