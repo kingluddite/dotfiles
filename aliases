@@ -5,6 +5,7 @@
 
 alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
 alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
+alias mysite='cd ~/Documents/dev/gatsby-stuff/reactsensei.com'
 
 # =================
 # School Aliases
