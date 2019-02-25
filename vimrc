@@ -20,7 +20,7 @@ call plug#begin('~/.vim/bundle')
     " Plug 'chemzqm/vim-jsx-improve' " jsx support
     " Plug 'marijnh/tern_for_vim'
     " Plug 'valloric/youcompleteme'
-    " Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-surround'
     " Plug 'easymotion/vim-easymotion'
     Plug 'mattn/emmet-vim'
     Plug 'tomtom/tcomment_vim'
@@ -143,8 +143,8 @@ autocmd FileType html,css,javascript.jsx EmmetInstall
 " let g:user_emmet_expandabbr_key='<Tab>'
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-nnoremap <silent> <leader>cs :Stylefmt<CR>
-vnoremap <silent> <leader>cs :StylefmtVisual<CR>
+"nnoremap <silent> <leader>cs :Stylefmt<CR>
+"vnoremap <silent> <leader>cs :StylefmtVisual<CR>
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
