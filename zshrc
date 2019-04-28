@@ -23,7 +23,8 @@ ZSH_THEME="cobalt2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
+# plugins=(sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
+plugins=(sudo alias-tips osx zsh-syntax-highlighting)
 
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
@@ -155,3 +156,15 @@ else
 		: $RANDOM
     }
 fi
+
+autoload -Uz compinit
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit -i
+else
+  compinit -C -i
+fi
+
+zmodload -i zsh/complist
+
+zprof
