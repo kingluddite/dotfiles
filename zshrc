@@ -1,12 +1,18 @@
-zmodload zsh/zprof
+#modload zsh/zprof
 # Path to your oh-my-zsh installation.
+#timer=$(($(gdate +%s%N)/1000000)) 
+
 export ZSH=$HOME/.oh-my-zsh
 
+# now=$(($(gdate +%s%N)/1000000))
+# elapsed=$(($now-$timer))
+# echo $elapsed":" $plugin
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="cobalt2"
+# ZSH_THEME="iguchi"
 # SPACESHIP_PROMPT_SYMBOL=">"
 # SPACESHIP_PACKAGE_SHOW=false
 # SPACESHIP_BATTERY_SHOW=false
@@ -24,7 +30,7 @@ ZSH_THEME="cobalt2"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
-plugins=(sudo alias-tips osx zsh-syntax-highlighting)
+# plugins=(sudo alias-tips osx zsh-syntax-highlighting)
 
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
@@ -33,14 +39,19 @@ plugins=(sudo alias-tips osx zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$PATH:/usr/local/lib/node_modules
-export MANPATH="/usr/local/man:$MANPATH"
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# export PATH=$PATH:/usr/local/lib/node_modules
+# export MANPATH="/usr/local/man:$MANPATH"
 # this is the root folder where all globally installed node packages will  go
 # export NPM_PACKAGES="/usr/local/npm_packages"
 # export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 # add to PATH
 # export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 ## MAMP stuff
 # PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
@@ -48,8 +59,9 @@ export MANPATH="/usr/local/man:$MANPATH"
 # MAMP and MYSQL
 # export PATH="/Applications/MAMP/Library/bin:$PATH"
 
-# --- not sure where this goes yet???
-# z - frecent (made up word but this is cool!)
+plugins=(vi-mode)
+
+# z - frecent (track where you last were)
 . $HOME/z.sh
 
 # --- Source
@@ -57,59 +69,12 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.functions
 
-## Your default theme (not sure about this yet)
-# source "$HOME/dotfiles/custom/themes/spaceship.zsh-theme" # our theme
-# source "$HOME/dotfiles/custom/themes/cobalt2.zsh-theme" # our theme
-
-# Show different symbols as appropriate for various Git repository states
-# parse_git_state() {
-#
-#   # Compose this value via multiple conditional appends.
-#   local GIT_STATE=""
-#
-#   local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
-#   if [ "$NUM_AHEAD" -gt 0 ]; then
-#     GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
-#   fi
-#
-#   local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
-#   if [ "$NUM_BEHIND" -gt 0 ]; then
-#     GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
-#   fi
-#
-#   local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
-#   if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
-#     GIT_STATE=$GIT_STATE$GIT_PROMPT_MERGING
-#   fi
-#
-#   if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-#     GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
-#   fi
-#
-#   if ! git diff --quiet 2> /dev/null; then
-#     GIT_STATE=$GIT_STATE$GIT_PROMPT_MODIFIED
-#   fi
-#
-#   if ! git diff --cached --quiet 2> /dev/null; then
-#     GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
-#   fi
-#
-#   if [[ -n $GIT_STATE ]]; then
-#     echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
-#   fi
-#
-# }
-
-# If inside a Git repository, print its branch and state
-# git_custom_status() {
-#   local git_where="$(parse_git_branch)"
-#   [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
-# }
+export KEYTIMEOUT=1
 
 # VI Mode
 # navigate zsh tab completion
-zstyle ':completion:*' menu select
-zmodload zsh/complist
+# zstyle ':completion:*' menu select
+# zmodload zsh/complist
 
 # use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
@@ -138,13 +103,12 @@ bindkey '`'  autosuggest-accept
 #   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 # }
 
-zle -N zle-line-init
-zle -N zle-keymap-select
+# zle -N zle-line-init
+# zle -N zle-keymap-select
 
 prompt_dir() {
     prompt_segment blue black "%$(( $COLUMNS - 61 ))<...<%3~%<<"
 }
-export KEYTIMEOUT=1
 if [ "$_Z_NO_RESOLVE_SYMLINKS" ]; then
     _z_precmd() {
         (_z --add "${PWD:a}" &)
@@ -157,14 +121,14 @@ else
     }
 fi
 
-autoload -Uz compinit
-typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
-if [ $(date +'%j') != $updated_at ]; then
-  compinit -i
-else
-  compinit -C -i
-fi
+# autoload -Uz compinit
+# typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+# if [ $(date +'%j') != $updated_at ]; then
+#   compinit -i
+# else
+#   compinit -C -i
+# fi
+#
+# zmodload -i zsh/complist
 
-zmodload -i zsh/complist
-
-zprof
+#zprof
