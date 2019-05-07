@@ -8,6 +8,10 @@ alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
 alias mysite='cd ~/Documents/dev/gatsby-stuff/reactsensei.com'
 alias vlad='cd ~/Documents/dev/gatsby-stuff/cgi-vlad'
 
+## ics
+## elastic path
+alias sso='cd ~/Documents/dev/okta-stuff/ep-sso'
+
 # =================
 # School Aliases
 # =================
