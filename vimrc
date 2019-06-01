@@ -2,6 +2,8 @@ set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 
 "filetype off                  " required
 
+" if syntax highlighting is breaking, this fixes it but it will lead to slowness
+autocmd BufEnter * :syntax sync fromstart
 call plug#begin('~/.vim/bundle')
 
 " Keep Plugin commands between plug#begin/end.
@@ -387,6 +389,12 @@ set updatecount=10
 " Damian Conway tip always use visual block mode
 nnoremap    v    <C-V>
 nnoremap  <C-V>    v
+
+" arrow keys are bad in Vim!
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " speed vim up
 " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334

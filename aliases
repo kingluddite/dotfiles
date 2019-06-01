@@ -11,7 +11,7 @@ alias vlad='cd ~/Documents/dev/gatsby-stuff/cgi-vlad'
 ## ics
 ## elastic path
 alias sso='cd ~/Documents/dev/okta-stuff/ep-sso'
-alias projects='cd ~/Dropbox (Iron Cove)/projects'
+alias project='cd ~/Dropbox\ \(Iron\ Cove\)/projects/'
 
 # =================
 # School Aliases
