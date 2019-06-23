@@ -59,7 +59,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # MAMP and MYSQL
 # export PATH="/Applications/MAMP/Library/bin:$PATH"
 
-plugins=(vi-mode)
+plugins=(vi-mode zsh-autosuggestions)
 
 # z - frecent (track where you last were)
 . $HOME/z.sh
