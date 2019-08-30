@@ -219,23 +219,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ## Vim Stuff
 * Vim is a super awesome text editor that has a huge learning curve but well worth the time to learn it
 * I have set it up with all the packages I like and feel free to dig in but I also have config setup for Sublime Text which might be a better choice for newbies
-* You first need to install **Vundle** (vim package manager) with:
-
-`$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-
-* All the packages I like are added but need to be installed
-* To install them navigate to dotfiles
-* Open the vimrc file with `$ vim vimrc`
-* Install plugins with `:PluginInstall`
-* Close and reopen iTerm
-* Youcompleteme
-* We just installed `cmake` using brew
-* Compiling YCM with semantic support and JavaScript
-
-```
-cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer --javascript
-```
+* I am using Plug to install plugins (switched from Vundle)
 
 ## Run apps
 * I like using `Spectacle` and `Alfred` all the time
