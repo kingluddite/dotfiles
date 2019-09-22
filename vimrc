@@ -1,93 +1,165 @@
+" -----------------------------------------------------------------------------
+" This config is targeted for Vim 8.0+ and expects you to have Plug installed.
+" -----------------------------------------------------------------------------
+
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 
 "filetype off                  " required
 
 " if syntax highlighting is breaking, this fixes it but it will lead to slowness
 autocmd BufEnter * :syntax sync fromstart
+
+" -----------------------------------------------------------------------------
+" Plugins
+" -----------------------------------------------------------------------------
+
+" Specify a directory for plugins.
 call plug#begin('~/.vim/bundle')
 
 " Keep Plugin commands between plug#begin/end.
-    " Plug 'Powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-    " Plug 'prettier/prettier'
-    " Plug 'tyru/open-browser.vim'
-    Plug 'jnurmine/zenburn'
-    " Plug 'stanangeloff/php.vim'
-    "Plug 'tpope/vim-markdown'
-    Plug 'mitermayer/vim-prettier'
-    " Plug 'ervandew/supertab' " Must load before youcompleteme
-    " Plug 'tpope/vim-fugitive'
-    " Plug 'airblade/vim-gitgutter' (super slow!)
-    " Plug 'pangloss/vim-javascript'
-    " Plug 'chemzqm/vim-jsx-improve' " jsx support
-    " Plug 'marijnh/tern_for_vim'
-    " Plug 'valloric/youcompleteme'
-    Plug 'tpope/vim-surround'
-    Plug 'easymotion/vim-easymotion'
-    Plug 'mattn/emmet-vim'
-    Plug 'tomtom/tcomment_vim'
-    Plug 'chun-yang/auto-pairs'
-    Plug 'ctrlpvim/ctrlp.vim'
-    " Plug 'tacahiroy/ctrlp-funky'
-    Plug 'w0rp/ale'
-    " Plug 'dsimidzija/vim-nerdtree-ignore'
-    " Plug 'rking/ag.vim' " Needs the_silver_searcher (install with brew)
-    " Plug 'ryanoasis/vim-devicons'
-    " Plug 'vimwiki/vimwiki'
-    " Plug 'bling/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
-    " Plug 'ap/vim-css-color'
-    " Plug 'leshill/vim-json'
-    " Plug 'chip/vim-fat-finger'
-    " Plug 'zirrostig/vim-schlepp'
-    Plug 'gioele/vim-autoswap'
-    " Plug 'kewah/vim-stylefmt'    
-    Plug 'jparise/vim-graphql'
-    " React code snippets
-    " ES2015 code snippets 
-    " Plug 'epilande/vim-es2015-snippets'
-    " React code snippets
-    Plug 'mxw/vim-jsx'
-    " Plug 'sirver/ultisnips'
-    " Plug 'epilande/vim-react-snippets'
+
+" Zenburn theme.
+Plug 'jnurmine/zenburn'
+
+" Navigate and manipulate files in a tree view.
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Automatically clear search highlights after you move your cursor.
+Plug 'haya14busa/is.vim'
+
+Plug 'mitermayer/vim-prettier'
+
+" Surround text with quotes, parenthesis, brackets, and more.
+Plug 'tpope/vim-surround'
+
+Plug 'easymotion/vim-easymotion'
+Plug 'mattn/emmet-vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'chun-yang/auto-pairs'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'w0rp/ale'
+Plug 'gioele/vim-autoswap'
+" React code snippets
+Plug 'mxw/vim-jsx'
+
+" Plugin Graveyard
+" Plug 'prettier/prettier'
+" Plug 'tyru/open-browser.vim'
+" Plug 'ervandew/supertab' " Must load before youcompleteme
+" Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter' (super slow!)
+" Plug 'chemzqm/vim-jsx-improve' " jsx support
+" Plug 'marijnh/tern_for_vim'
+" Plug 'valloric/youcompleteme'
+" Plug 'tacahiroy/ctrlp-funky'
+" Plug 'dsimidzija/vim-nerdtree-ignore'
+" Plug 'ryanoasis/vim-devicons'
+" Plug 'vimwiki/vimwiki'
+" Plug 'bling/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'ap/vim-css-color'
+" Plug 'chip/vim-fat-finger'
+" Plug 'zirrostig/vim-schlepp'
+" React code snippets
+" ES2015 code snippets 
+" Plug 'epilande/vim-es2015-snippets'
+" Plug 'kewah/vim-stylefmt'    
+" Plug 'sirver/ultisnips'
+" Plug 'epilande/vim-react-snippets'
+
+" Languages and file types.
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'chrisbra/csv.vim'
+Plug 'ekalinin/dockerfile.vim'
+Plug 'elzr/vim-json'
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'lifepillar/pgsql.vim'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'stephpy/vim-yaml'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tpope/vim-git'
+Plug 'jparise/vim-graphql'
+
 " All of your Plugins must be added before the following line
-" Initialize plugin system
 call plug#end()            " required
+
+" -----------------------------------------------------------------------------
+" Basic Settings
+"   Research any of these by running :help <setting>
+" -----------------------------------------------------------------------------
+
+let mapleader = "\<Space>" " yep - the space bar is my leader key
+
+set autoindent             " auto-indent
+set bg=dark
+set backspace=indent,eol,start
+set backup                 " create backups
+set backupdir=/tmp         " tell vim where to put its backup files
+set clipboard=unnamed " set clipboard to easily copy from vim and paste into OSx
+set dir=/tmp               " tell vim where to put swap files
+set foldcolumn=1           " Add a bit extra margin to the left
+set foldmethod=indent      " Code fold bliss
+set formatoptions=tcqrn1
+set encoding=utf-8         " Encoding
+set expandtab              " use spaces instead of tabs
+set hidden                 " Allow hidden buffers
+set history=1000           " Keep 1000 items in the history
+set hlsearch
+let html_no_rendering=1 
+set ignorecase  " Make searches case-insensitive
+set incsearch   " But do highlight as you type your search
+set laststatus=2    " last window always has a status line
+set lbr                    " makes for an easier to read line wrap
+let loaded_matchparen=1 
+set matchpairs+=<:> " use % to jump between pairs
+set modelines=0
+set nohlsearch             " Don't continue to highlight seached phrases
+set noshowmatch            " Don't match parentheses/brackets
+set nocursorline           " Don't paint cursor line
+set nocursorcolumn         " Don't paint cursor column
+set noshiftround           " always indent/outdent to the nearest tabstop
+set nowrap                 " Don't wrap text
+set number relativenumber
+set ruler                  " Always show info along bottom
+set scrolljump=8           " Scroll 8 lines at a time at bottom/top
+set showmatch
+set si                     " Smart indent
+set shiftwidth=2   " indent/outdent by 2 columns
+set showcmd
+set showmode
+set softtabstop=2  " unify
+set smartcase
+set smarttab               " use tabs at the start of a line, spaces elsewhere
+set scrolloff=5
+set shiftwidth=2           " 1 tab == 2 spaces
+set t_Co=256               " enable 256-color mode
+set t_vb=
+set tabstop=2              " tab spacing
+set term=xterm-256color
+set termencoding=utf-8"
+set textwidth=79
+set timeoutlen=1000        " speed vim up
+set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
+set ttyfast                " Rendering
+set tw=500
+set visualbell             " Blink cursor on error instead of beeping (grr)
+set wildmenu               " shows a menu when using tab completion
+set wildmode=full
+set wildignore+=*/tmp/*,/dist/* " wildignore limits searches
+set wildignore+=/node_modules/*,*.so,*.swp,*.zip
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=.DS_Store,.git,.hg,.svn
+set wildignore+=*~,*.swp,*.swo,*.tmp
+set wrap                   
+set runtimepath^=~/.vim/bundle.ctrlp.vim " fuzzy search
+
+runtime! macros/matchit.vim
 
 filetype plugin indent on    " (required) activates indenting for files
 
-
-" speed up vim
-let loaded_matchparen=1 " Don't load matchit.vim (paren/bracket matching)
-set noshowmatch         " Don't match parentheses/brackets
-set nocursorline        " Don't paint cursor line
-set nocursorcolumn      " Don't paint cursor column
-set lazyredraw          " Wait to redraw
-set scrolljump=8        " Scroll 8 lines at a time at bottom/top
-let html_no_rendering=1 " Don't render italic, bold, links in HTML
-
-" add Powerline font
-" set guifont=Inconsolata\ for\Powerline:h15
-set guifont=Fira\ Code:h12
 let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set t_Co=256            " enable 256-color mode
-set term=xterm-256color
-set termencoding=utf-8"
-
-" Keep 1000 items in the history
-set history=1000
-
-" shows a menu when using tab completion
-set wildmenu
-
-" deal with swps and backups here
-" create backups
-set backup
-" tell vim where to put its backup files
-set backupdir=/tmp
-" tell vim where to put swap files
-set dir=/tmp
 
 if has("gui_running")
    let s:uname = system("uname")
@@ -95,35 +167,6 @@ if has("gui_running")
       set guifont=Inconsolata\ for\ Powerline:h15
    endif
 endif
-
-" TODO: Pick a leader key
-let mapleader = "\<Space>" " yep - the space bar is my leader key
-
-" vimwiki with markdown support
-" let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-" helppage -> :h vimwiki-syntax
-
-" vim-instant-markdown - Instant Markdown previews from Vim
-" https://github.com/suan/vim-instant-markdown
-" let g:instant_markdown_autostart = 0	" disable autostart
-" map <leader>md :InstantMarkdownPreview<CR>
-
-" make YCM compatible with UltiSnips (using supertab)
-"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-"let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-"let g:UltiSnipsExpandTrigger = "<tab>"
-"let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-"inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
-"inoremap <Tab> <c-r>=UltiSnips#ExpandSnippet()<cr>
-
-" Trigger react snippets
-"let g:UltiSnipsExpandTrigger="<C-L>"
 
 " lets emmet use jsx shortcuts
 let g:user_emmet_expandabbr_key='<Tab>'
@@ -136,19 +179,7 @@ let g:user_emmet_settings = {
 
 let g:jsx_ext_required = 0
 
-
 autocmd FileType html,css,javascript.jsx EmmetInstall
-
-" Using tab as abbreviation for emmet
-" This also allows you to <tab> for indentation
-" let g:user_emmet_expandabbr_key='<Tab>'
-" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
-"nnoremap <silent> <leader>cs :Stylefmt<CR>
-"vnoremap <silent> <leader>cs :StylefmtVisual<CR>
-
-" If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
 
 " ESLint through Vim
 " Fix eslint on save
@@ -176,81 +207,11 @@ nmap <leader>d <Plug>(ale_fix)
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
-" wildignore yo! --->  limit searches
-set wildignore+=*/tmp/*,/dist/*
-set wildignore+=/node_modules/*,*.so,*.swp,*.zip
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-set wildignore+=.DS_Store,.git,.hg,.svn
-set wildignore+=*~,*.swp,*.swo,*.tmp
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
-set smarttab      " use tabs at the start of a line, spaces elsewhere
-
-" 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2     " tab spacing
-
-" Linebreak on 500 characters
-set lbr " makes for an easier to read line wrap
-set tw=500
-
-set ai            " Auto indent
-set si            " Smart indent
-set wrap          " Wrap lines
-set nowrap        " Don't wrap text
-
-set bg=dark
-" Security
-set modelines=0
-
-" Show line numbers
-" Both absolute and relative line numbers are enabled by default, which produces “hybrid” line numbers. When entering insert mode, relative line numbers are turned off, leaving absolute line numbers turned on. This also happens when the buffer loses focus, so you can glance back at it to see which absolute line you were working on
-:set number relativenumber
-
 :augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
-
-" Show file stats
-set ruler " Always show info along bottom
-set nohlsearch       " Don't continue to highlight seached phrases
-" Add a bit extra margin to the left
-set foldcolumn=1
-
-" Code fold bliss
-set foldmethod=indent
-
-" Blink cursor on error instead of beeping (grr)
-set visualbell
-set t_vb=
-
-" Encoding
-set encoding=utf-8
-
-" fuzzy search
-set runtimepath^=~/.vim/bundle.ctrlp.vim
-" Whitespace
-set wrap
-set textwidth=79
-set formatoptions=tcqrn1
-set tabstop=2
-set shiftwidth=2   " indent/outdent by 2 columns
-set softtabstop=2  " unify
-set expandtab      " use spaces instead of tabs
-set noshiftround   " always indent/outdent to the nearest tabstop
-
-" Cursor motion
-set scrolloff=5
-set backspace=indent,eol,start
-set matchpairs+=<:> " use % to jump between pairs
-runtime! macros/matchit.vim
-
 
 " Edit the vimrc file
 nmap <silent> ,ev :e $MYVIMRC<CR>
@@ -266,20 +227,6 @@ nnoremap <s-tab> za
 " save with zz
 nnoremap zz :update<cr>
 
-" Bubble single lines
-"nmap <c-k> ddkP
-"nmap <c-j> ddp
-
-" alt splits on Mac
-" nmap ˙ <C-w><Left>
-" nmap ∆  <C-w><Down>
-" nmap ˚ <C-w><Up>
-" nmap ¬ <C-w><Right>
-
-" Bubble multiple lines
-"vmap <c-k> xkP`[V`]
-"vmap <c-j> xp`[V`]
-
 " easy nav through screens with hjkl
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -290,34 +237,12 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-L> <C-W><C-L> " focus on left
 nnoremap <C-H> <C-W><C-H> " focus on right
 
-" Allow hidden buffers
-set hidden
-
-" Rendering
-set ttyfast
-
-" Status bar
-set laststatus=2    " last window always has a status line
-
-" Last line
-set showmode
-
-" show incomplete commands
-set showcmd
-
-" set clipboard to easily copy from vim and paste into OSx
-set clipboard=unnamed
 
 " Searching
 nnoremap / /\v
 vnoremap / /\v
-set hlsearch
-set incsearch   " But do highlight as you type your search
-set ignorecase  " Make searches case-insensitive
 
-set autoindent  " auto-indent
-set smartcase
-set showmatch
+
 map <leader><space> :let @/=''<cr> " clear search
 
 "make < > shifts keep selection
@@ -394,11 +319,6 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-" speed vim up
-" https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
-set timeoutlen=1000
-set ttimeoutlen=0
 
 " colorscheme solarized
 " my theme
