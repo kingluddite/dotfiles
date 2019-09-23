@@ -19,7 +19,9 @@ call plug#begin('~/.vim/bundle')
 " Keep Plugin commands between plug#begin/end.
 
 " Zenburn theme.
-Plug 'jnurmine/zenburn'
+" Plug 'jnurmine/zenburn'
+" Gruvbox theme.
+Plug 'gruvbox-community/gruvbox'
 
 " Navigate and manipulate files in a tree view.
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -28,6 +30,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'haya14busa/is.vim'
 
 Plug 'mitermayer/vim-prettier'
+
+" Modify * to also work with visual selections.
+Plug 'nelstrom/vim-visual-star-search'
 
 " Surround text with quotes, parenthesis, brackets, and more.
 Plug 'tpope/vim-surround'
@@ -84,6 +89,89 @@ Plug 'jparise/vim-graphql'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
+
+" -----------------------------------------------------------------------------
+" Color settings
+" -----------------------------------------------------------------------------
+
+colorscheme gruvbox
+" For Gruvbox to look correct in terminal Vim you'll want to source a palette
+" script that comes with the Gruvbox plugin.
+"
+" Add this to your ~/.profile file:
+"   source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
+
+" Gruvbox comes with both a dark and light theme.
+set background=dark
+
+" Gruvbox has 'hard', 'medium' (default) and 'soft' contrast options.
+let g:gruvbox_contrast_light='hard'
+
+" This needs to come last, otherwise the colors aren't correct.
+syntax on
+
+" -----------------------------------------------------------------------------
+" Status line
+" -----------------------------------------------------------------------------
+
+" Heavily inspired by: https://github.com/junegunn/dotfiles/blob/master/vimrc
+function! s:statusline_expr()
+  let mod = "%{&modified ? '[+] ' : !&modifiable ? '[x] ' : ''}"
+  let ro  = "%{&readonly ? '[RO] ' : ''}"
+  let ft  = "%{len(&filetype) ? '['.&filetype.'] ' : ''}"
+  let fug = "%{exists('g:loaded_fugitive') ? fugitive#statusline() : ''}"
+  let sep = ' %= '
+  let pos = ' %-12(%l : %c%V%) '
+  let pct = ' %P'
+
+  return '[%n] %f %<'.mod.ro.ft.fug.sep.pos.'%*'.pct
+endfunction
+
+let &statusline = s:statusline_expr()
+
+" -----------------------------------------------------------------------------
+" Change status line color for insert and replace modes
+" -----------------------------------------------------------------------------
+
+" Optimized for gruvbox:hard (both dark and light).
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    if (&background == 'dark')
+      hi StatusLine ctermfg=109 ctermbg=0 guifg=#83a598 guibg=#000000
+    else
+      hi StatusLine ctermfg=24 ctermbg=255 guifg=#076678 guibg=#ffffff
+    endif
+  elseif a:mode == 'r'
+    if (&background == 'dark')
+      hi StatusLine ctermfg=106 ctermbg=0 guifg=#98971a guibg=#000000
+    else
+      hi StatusLine ctermfg=100 ctermbg=255 guifg=#79740e guibg=#ffffff
+    endif
+  else
+    if (&background == 'dark')
+      hi StatusLine ctermfg=166 ctermbg=0 guifg=#d65d0e guibg=#000000
+    else
+      hi StatusLine ctermfg=88 ctermbg=255 guifg=#9d0006 guibg=#ffffff
+    endif
+  endif
+endfunction
+
+function! InsertLeaveActions()
+  if (&background == 'dark')
+    au InsertLeave * hi StatusLine ctermfg=239 ctermbg=223 guifg=#504945 guibg=#ebdbb2
+  else
+    au InsertLeave * hi StatusLine ctermfg=250 ctermbg=0 guifg=#d5c4a1 guibg=#000000
+  endif
+endfunction
+
+au InsertEnter * call InsertStatuslineColor(v:insertmode)
+au InsertChange * call InsertStatuslineColor(v:insertmode)
+au InsertLeave * call InsertLeaveActions()
+
+" Ensure status line color gets reverted if exiting insert mode with CTRL + C.
+inoremap <C-c> <C-o>:call InsertLeaveActions()<CR><C-c>
+
+
 
 " -----------------------------------------------------------------------------
 " Basic Settings
@@ -213,6 +301,26 @@ let g:airline#extensions#ale#enabled = 1
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
+" -----------------------------------------------------------------------------
+" Basic mappings
+" -----------------------------------------------------------------------------
+" Press * to search for the term under the cursor or a visual selection and
+" then press a key below to replace all instances of it in the current file.
+nnoremap <Leader>r :%s///g<Left><Left>
+nnoremap <Leader>rc :%s///gc<Left><Left><Left>
+
+" The same as above but instead of acting on the whole file it will be
+" restricted to the previously visually selected range. You can do that by
+" pressing *, visually selecting the range you want it to apply to and then
+" press a key below to replace all instances of it in the current selection.
+xnoremap <Leader>r :s///g<Left><Left>
+xnoremap <Leader>rc :s///gc<Left><Left><Left>
+
+" Type a replacement term and press . to repeat the replacement again. Useful
+" for replacing a few instances of the term (comparable to multiple cursors).
+nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
+xnoremap <silent> s* "sy:let @/=@s<CR>cgn
+
 " Edit the vimrc file
 nmap <silent> ,ev :e $MYVIMRC<CR>
 nmap <silent> ,sv :so $MYVIMRC<CR>
@@ -227,16 +335,18 @@ nnoremap <s-tab> za
 " save with zz
 nnoremap zz :update<cr>
 
-" easy nav through screens with hjkl
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+" Navigate around splits with a single key combo.
 nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
 
 " easy navigation in split windows
 nnoremap <C-L> <C-W><C-L> " focus on left
 nnoremap <C-H> <C-W><C-H> " focus on right
 
+" Press * to search for the term under the cursor or a visual selection and
+" then press a key below to replace all instances of it in the current file.
 
 " Searching
 nnoremap / /\v
@@ -322,8 +432,8 @@ noremap <Right> <NOP>
 
 " colorscheme solarized
 " my theme
-syntax on
-colors zenburn
+" syntax on
+" colors zenburn
 
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE

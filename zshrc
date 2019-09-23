@@ -4,6 +4,10 @@
 
 export ZSH=$HOME/.oh-my-zsh
 
+# More accurate 256 colors with Gruvbox.
+#   Requires: https://github.com/morhetz/gruvbox
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+
 # now=$(($(gdate +%s%N)/1000000))
 # elapsed=$(($now-$timer))
 # echo $elapsed":" $plugin
