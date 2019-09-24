@@ -8,6 +8,12 @@ export ZSH=$HOME/.oh-my-zsh
 #   Requires: https://github.com/morhetz/gruvbox
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
+# Enable a better reverse search experience.
+#   Requires: https://github.com/junegunn/fzf (to use fzf in general)
+#   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '{!.git,node_modules}'"
+[ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
+
 # now=$(($(gdate +%s%N)/1000000))
 # elapsed=$(($now-$timer))
 # echo $elapsed":" $plugin

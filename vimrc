@@ -23,6 +23,10 @@ call plug#begin('~/.vim/bundle')
 " Gruvbox theme.
 Plug 'gruvbox-community/gruvbox'
 
+" Integrate fzf with Vim.
+Plug '/usr/local/opt/fzf' " installed via homebrew
+Plug 'junegunn/fzf.vim'
+
 " Navigate and manipulate files in a tree view.
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
@@ -33,6 +37,9 @@ Plug 'mitermayer/vim-prettier'
 
 " Modify * to also work with visual selections.
 Plug 'nelstrom/vim-visual-star-search'
+
+" Handle multi-file find and replace.
+Plug 'mhinz/vim-grepper'
 
 " Surround text with quotes, parenthesis, brackets, and more.
 Plug 'tpope/vim-surround'
@@ -352,6 +359,24 @@ nnoremap <C-H> <C-W><C-H> " focus on right
 nnoremap / /\v
 vnoremap / /\v
 
+" .............................................................................
+" junegunn/fzf.vim
+" .............................................................................
+
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
+" Launch fzf with CTRL+P.
+nnoremap <silent> <C-p> :FZF -m<CR>
+
+" Map a few common things to do with FZF.
+nnoremap <silent> <Leader><Enter> :Buffers<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
+
+" Allow passing optional flags into the Rg command.
+"   Example: :Rg myterm -g '*.md'
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case " . <q-args>, 1, <bang>0)
+
+" END fzf
 
 map <leader><space> :let @/=''<cr> " clear search
 
@@ -430,11 +455,33 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" colorscheme solarized
-" my theme
-" syntax on
-" colors zenburn
+" .............................................................................
+" mhinz/vim-grepper
+" .............................................................................
 
+let g:grepper={}
+let g:grepper.tools=["rg"]
+
+xmap gr <plug>(GrepperOperator)
+
+" After searching for text, press this mapping to do a project wide find and
+" replace. It's similar to <leader>r except this one applies to all matches
+" across all files instead of just the current file.
+nnoremap <Leader>R
+  \ :let @s='\<'.expand('<cword>').'\>'<CR>
+  \ :Grepper -cword -noprompt<CR>
+  \ :cfdo %s/<C-r>s//g \| update
+  \<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+
+" The same as above except it works with a visual selection.
+xmap <Leader>R
+    \ "sy
+    \ gvgr
+    \ :cfdo %s/<C-r>s//g \| update
+     \<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+
+" END vim-grepper
+"
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
 " iterm cursor changes depending on mode
