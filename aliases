@@ -3,6 +3,9 @@
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# use NeoVim instead of vim
+alias vim'nvim' >> ~/.zshrc
+
 alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
 alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
 alias mysite='cd ~/Documents/dev/gatsby-stuff/reactsensei.com'
