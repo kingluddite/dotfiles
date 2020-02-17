@@ -141,8 +141,7 @@ fi
 #
 # zmodload -i zsh/complist
 
-# add generator for gitignore
-echo "function gi() { curl -sLw "\n" https://www.gitignore.io/api/\$@ ;}" >> \
-~/.zshrc && source ~/.zshrc
 #zprof
 alias vim=nvim
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
