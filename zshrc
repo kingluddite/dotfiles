@@ -8,6 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 #   Requires: https://github.com/morhetz/gruvbox
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
+
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
@@ -47,9 +48,11 @@ ZSH_THEME="cobalt2"
 # echo $ZSH_CUSTOM (shows where it is)
 # ZSH_CUSTOM=$HOME/dotfiles/custom/themes/
 
+# Hub aliasing
+eval "$(hub alias -s)"
 # User configuration
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/opt/mongodb-community@4.0/bin
 # export PATH=$PATH:/usr/local/lib/node_modules
 # export MANPATH="/usr/local/man:$MANPATH"
 # this is the root folder where all globally installed node packages will  go
@@ -68,6 +71,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
 # MAMP and MYSQL
 # export PATH="/Applications/MAMP/Library/bin:$PATH"
+
+# add mysql to zshrc
+export PATH=/usr/local/mysql/bin:$PATH
 
 plugins=(vi-mode zsh-autosuggestions)
 
