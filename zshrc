@@ -6,15 +6,15 @@ export ZSH=$HOME/.oh-my-zsh
 
 # More accurate 256 colors with Gruvbox.
 #   Requires: https://github.com/morhetz/gruvbox
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+# source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '{!.git,node_modules}'"
-[ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
-
+# [ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
+export FZF_BASE="$HOME/.fzf"
 # now=$(($(gdate +%s%N)/1000000))
 # elapsed=$(($now-$timer))
 # echo $elapsed":" $plugin
@@ -75,7 +75,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # add mysql to zshrc
 export PATH=/usr/local/mysql/bin:$PATH
 
-plugins=(vi-mode zsh-autosuggestions)
+plugins=(vi-mode zsh-autosuggestions fzf)
 
 # z - frecent (track where you last were)
 . $HOME/z.sh
@@ -151,3 +151,9 @@ fi
 alias vim=nvim
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+# python stuff
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

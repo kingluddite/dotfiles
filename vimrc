@@ -218,7 +218,7 @@ set noshiftround           " always indent/outdent to the nearest tabstop
 set nowrap                 " Don't wrap text
 set number relativenumber
 set ruler                  " Always show info along bottom
-set scrolljump=8           " Scroll 8 lines at a time at bottom/top
+"set scrolljump=8           " Scroll 8 lines at a time at bottom/top
 set showmatch
 set si                     " Smart indent
 set shiftwidth=2   " indent/outdent by 2 columns
