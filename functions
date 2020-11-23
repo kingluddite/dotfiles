@@ -16,6 +16,11 @@ function _t() {
   tree -I '.git|node_modules|bower_components|.DS_Store' --dirsfirst -L $levels -aC $@
 }
 
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
+
 # Generate .gitignore
 # `$ gi node,macos >> .gitignore`
 function gi() { curl -sLw "\n" https://www.gitignore.io/api/\$@ ;}

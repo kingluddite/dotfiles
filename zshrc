@@ -1,6 +1,7 @@
-#modload zsh/zprof
+# zmodload zsh/zprof
+# uncomment this to test zsh speed
 # Path to your oh-my-zsh installation.
-#timer=$(($(gdate +%s%N)/1000000)) 
+#timer=$(($(gdate +%s%N)/1000000))
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -12,7 +13,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '{!.git,node_modules}'"
+# export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '{!.git,node_modules}'"
+# export FZF_DEFAULT_COMMAND="rg --files"
+export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 # [ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
 export FZF_BASE="$HOME/.fzf"
 # now=$(($(gdate +%s%N)/1000000))
@@ -147,7 +150,7 @@ fi
 #
 # zmodload -i zsh/complist
 
-#zprof
+
 alias vim=nvim
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
@@ -157,3 +160,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zprof # bottom of .zshrc for speed
+export PATH="/usr/local/opt/node@12/bin:$PATH"
