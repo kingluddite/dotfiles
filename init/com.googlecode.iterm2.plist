@@ -675,6 +675,8 @@
 			<integer>80</integer>
 			<key>Command</key>
 			<string>/usr/local/bin/zsh -il</string>
+			<key>Cursor Boost</key>
+			<real>0.012030346820809249</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -717,6 +719,8 @@
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
+			<true/>
+			<key>Draw Powerline Glyphs</key>
 			<true/>
 			<key>Flashing Bell</key>
 			<false/>
@@ -1041,7 +1045,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.0</real>
+			<real>0.50858020231213874</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
