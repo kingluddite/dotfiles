@@ -163,3 +163,5 @@ fi
 
 # zprof # bottom of .zshrc for speed
 export PATH="/usr/local/opt/node@12/bin:$PATH"
+# Sublime Text can now use subl
+export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
