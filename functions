@@ -1,9 +1,10 @@
-gulp-boilerplate(){
-  git clone https://github.com/kingluddite/webpack-gulp-boilerplate.git $1 && cd $1 && yarn && npm run dev
-}
+
+# kill port faster from command line (free up port easily)
+# usage: Running: `killport 3000` will free up port 3000
+function killport(){ lsof -nti:$1 | xargs kill -9 };
 
 eslint-boilerplate(){
-  git clone https://github.com/kingluddite/eslint-boilerplate.git . && yarn
+  git clone https://github.com/kingluddite/eslint-boilerplate.git . && npm i
 }
 
 function cdl { cd $1; ls;}
@@ -24,3 +25,11 @@ timezsh() {
 # Generate .gitignore
 # `$ gi node,macos >> .gitignore`
 function gi() { curl -sLw "\n" https://www.gitignore.io/api/\$@ ;}
+
+
+#########
+graveyard
+#########
+# gulp-boilerplate(){
+#  git clone https://github.com/kingluddite/webpack-gulp-boilerplate.git $1 && cd $1 && yarn && npm run dev
+# }
