@@ -2,11 +2,11 @@
 #brew update
 
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'homebrew/php'
+# tap 'homebrew/php'
 
 # Install ZSH
 brew 'zsh'
@@ -26,18 +26,19 @@ brew 'zsh-autosuggestions'
 # brew 'grep'
 
 # Install Binaries
-# brew 'awscli'
 brew 'git'
 brew 'hub'
 brew 'tree'
-# brew 'mackup'
-# brew 'mas'
 brew 'node'
 brew 'trash'
 brew 'cmake'
+# brew 'mackup'
+# brew 'mas'
+# brew 'awscli'
 # brew 'wget'
 
 # Development
+## PHP stuff
 # brew 'php71'
 # brew 'php71-intl'
 #brew 'php71-imagick'
@@ -59,16 +60,20 @@ cask 'visual-studio-code'
 cask 'slack'
 cask 'mac2imgur'
 # cask 'Caskroom/cask/karabiner-elements'
-# cask 'caffeine'
-# cask 'dropbox'
-cask 'spectacle'
-# cask 'docker'
-# cask 'firefox'
+cask 'karabiner-elements'
+cask 'caffeine'
+cask 'dropbox'
+# cask 'spectacle'
+# rectangle replaces spectacle
+cask 'rectangle'
+cask 'docker'
+cask 'firefox'
 cask 'google-chrome'
-# cask 'gpgtools'
 cask 'jumpcut'
-# cask 'insomnia'
-# cask 'mysqlworkbench'
+cask 'insomnia'
+cask 'postman'
+cask 'mysqlworkbench'
+# cask 'gpgtools'
 # cask 'now'
 # cask 'phpstorm'
 # cask 'quip'
@@ -93,6 +98,7 @@ cask 'font-source-code-pro-for-powerline'
 # cask 'font-source-serif-pro'
 cask 'font-fira-code'
 cask 'font-firacode-nerd-font-mono'
+
 # Install Mac App Store apps
 # mas '1Password', id: 443987910
 # mas 'Byword', id: 420212497

@@ -7,11 +7,12 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +166 zshrc
+badd +12 README.md
+badd +66 Brewfile
+badd +12 install.sh
 argglobal
 %argdel
-$argadd zshrc
-edit zshrc
+$argadd README.md
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -19,40 +20,16 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-setlocal fdm=syntax
+enew
+file NERD_tree_1
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
 setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
-setlocal fen
-81
-normal! zo
-128
-normal! zo
-128
-normal! zo
-132
-normal! zo
-132
-normal! zo
-133
-normal! zo
-137
-normal! zo
-137
-normal! zo
-138
-normal! zo
-155
-normal! zo
-let s:l = 167 - ((19 * winheight(0) + 10) / 20)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-167
-normal! 076|
+setlocal nofen
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
