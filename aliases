@@ -29,6 +29,7 @@ alias kll='kill -9'
 alias fpid3='lsof -i:3000'
 alias fpid5='lsof -i:5858'
 alias mls='lsof -Pi | grep LISTEN'
+alias killport='function _killp(){ lsof -nti:$1 | xargs kill -9 };_killp'
 
 # =================
 # Client Aliases
