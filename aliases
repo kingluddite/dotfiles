@@ -157,7 +157,7 @@ alias show_files="defaults write com.apple.finder AppleShowAllFiles TRUE && kill
 # ================
 # Application
 # ================
-alias sop='sublime .'
+alias sop='subl .'
 alias db='cd ~/Dropbox'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias phub='hub browse kingluddite'
