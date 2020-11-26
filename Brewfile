@@ -12,6 +12,7 @@ tap 'homebrew/bundle'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 
 # Install GNU core utilities (those that come with macOS are outdated)
 # brew 'coreutils'
@@ -27,6 +28,7 @@ brew 'zsh-autosuggestions'
 
 # Install Binaries
 brew 'git'
+brew 'neofetch'
 brew 'hub'
 cask 'gh'
 brew 'tree'

@@ -502,6 +502,10 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 
 - Sign in with your email and get access to all Slack workspaces you need
 
+### Neofetch
+
+- [what is neofetch](https://github.com/dylanaraps/neofetch)
+
 ## General Troubleshooting Tips
 
 - `zfrash` (that is my alias to refresh the `zshrc`)
@@ -551,5 +555,16 @@ Please add "export FZF_BASE=/path/to/fzf/install/dir" to your .zshrc
 
 - [Add Fonts with Nerd Fonts to Alacritty](https://www.youtube.com/watch?v=fR4ThXzhQYI)
 
-* Place your fonts in `~/local/share/fonts`
-* [This video shows you the step-by-step](https://www.youtube.com/watch?v=fR4ThXzhQYI)
+- [Walks throught the step-by-step of the config](https://www.youtube.com/watch?v=eXyrTFNsdHA)
+
+### Special Instructions for installing NerdFonts on Mac
+
+- Use [Homebrew](https://github.com/Homebrew/homebrew-cask-fonts)
+- To install it's a two step process:
+
+1. brew tap homebrew/cask-fonts # You only need to do this once!
+2. brew cask install font-hack-nerd-font # Then just do this again for all other fonts you want to install
+
+- All the other casks are inside the [Casks folder](https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
+- That's it. You will now see icons inside Alacritty
+- **note** [Fira Code is a very cool concept](https://github.com/tonsky/FiraCode)

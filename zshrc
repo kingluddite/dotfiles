@@ -165,3 +165,5 @@ fi
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 # Sublime Text can now use subl
 export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
+# Makes green/red highlighting work
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
