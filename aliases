@@ -5,22 +5,17 @@
 
 # use NeoVim instead of vim
 alias vim'nvim' >> ~/.zshrc
-
+# alias vim=nvim
 alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
 alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
 alias mysite='cd ~/Documents/dev/gatsby-stuff/reactsensei.com'
 alias vlad='cd ~/Documents/dev/gatsby-stuff/cgi-vlad'
 
-## ics
-## elastic path
-alias sso='cd ~/Documents/dev/okta-stuff/ep-sso'
-alias project='cd ~/Dropbox\ \(Iron\ Cove\)/projects/'
+# make tmux work with alacritty
+export TERM=xterm-256color
 
-# =================
-# School Aliases
-# =================
-# emerging tech
-# alias et='cd ~/Documents/dev/classes/gwda313/2016/summer/'
+## super lazy way to open neovim
+alias v="nvim"
 
 # =================
 # Node Aliases

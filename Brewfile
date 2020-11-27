@@ -28,6 +28,8 @@ brew 'zsh-syntax-highlighting'
 
 # Install Binaries
 brew 'git'
+brew 'fzf'
+brew 'ripgrep'
 brew 'neofetch'
 brew 'hub'
 cask 'gh'

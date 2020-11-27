@@ -150,8 +150,6 @@ fi
 #
 # zmodload -i zsh/complist
 
-
-alias vim=nvim
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 # python stuff
