@@ -7,6 +7,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 # tap 'homebrew/php'
+tap "mongodb/brew"
 
 # Install ZSH
 brew 'zsh'
@@ -28,6 +29,9 @@ brew 'zsh-syntax-highlighting'
 
 # Install Binaries
 brew 'git'
+# https://stackoverflow.com/questions/59232089/how-to-install-gnu-grep-on-mac-os
+# Please read above link to decide how you'll use grep
+brew 'grep'
 brew 'fzf'
 brew 'ripgrep'
 brew 'neofetch'
@@ -37,25 +41,20 @@ brew 'tree'
 brew 'node'
 brew 'trash'
 brew 'cmake'
+brew 'ssh-copy-id'
+brew 'tmux'
+brew 'wget'
+brew 'zsh'
 # brew 'mackup'
 # brew 'mas'
 # brew 'awscli'
 # brew 'wget'
 
-# Development
-## PHP stuff
-# brew 'php71'
-# brew 'php71-intl'
-#brew 'php71-imagick'
-# brew 'mcrypt'
-# brew 'php71-mcrypt'
-# brew 'composer' # Remember to update $PATH in .zshrc
-# export PATH="$HOME/.npm-packages/bin:$(brew --prefix homebrew/php/php70)/bin:$PATH"
-# brew 'mariadb'
-brew 'ssh-copy-id'
-brew 'tmux'
-brew 'wget'
-brew 'zsh'
+# databases
+brew 'mongodb/brew/mongodb-community'
+brew 'mysql'
+brew 'sqllite'
+brew 'postgress'
 
 # Apps
 cask 'alfred'
@@ -66,6 +65,7 @@ cask 'sublime-text'
 # cask 'visual-studio-code'
 # I use vscodium because I like using neovim - if you are not, comment out this line and comment in the previous line
 # note: If you had visual-studio-code installed you need to uninstall it with `$ brew uninstall visual-studio-code`
+
 cask 'vscodium'
 cask 'slack'
 cask 'mac2imgur'

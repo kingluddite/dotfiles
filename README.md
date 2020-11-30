@@ -454,6 +454,15 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 - I invested a lot of time learning Vim but saw the community kind of move towards Neovim and after watching the ChristAtMachine neovim youtube series, I jumped to Neovim
 - I teach and need to use VS Code in the classroom. Why not make VS Code work like Neovim and that's what I'm trying to do (I also have Sublime Text using Vim like stuff and the goal is just to keep typing all my neovim keyboard shortcuts everywhere so I get better and faster)
 
+## Databases
+
+- MongoDB
+- Postgres
+- MySQL
+  - MySQL Workbench (IDE for working with MySQL)
+
+To avoid a pesky error "Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock" start mysql as a server with `$ brew services start mysql` and just run `$ mysql -uroot` and you can run without a password. I find developing it is easier to just use no password, enter an empty string as a password for connecting to mysql
+
 ## Apps
 
 ### Rectangle (window management)
