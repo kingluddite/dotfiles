@@ -456,12 +456,21 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 
 ## Databases
 
-- MongoDB
-- Postgres
-- MySQL
+- When you run the databases decide if you want to run them as services (if you do, they will start automatically on a cold reboot)
+
+* MongoDB
+* Postgres
+* MySQL
   - MySQL Workbench (IDE for working with MySQL)
 
 To avoid a pesky error "Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock" start mysql as a server with `$ brew services start mysql` and just run `$ mysql -uroot` and you can run without a password. I find developing it is easier to just use no password, enter an empty string as a password for connecting to mysql
+
+## Tools
+
+### grep
+
+- https://stackoverflow.com/questions/59232089/how-to-install-gnu-grep-on-mac-os
+- [Why did we install grep with Homebrew?](https://news.ycombinator.com/item?id=19522456)
 
 ## Apps
 
