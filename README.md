@@ -458,12 +458,20 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 
 - When you run the databases decide if you want to run them as services (if you do, they will start automatically on a cold reboot)
 
-* MongoDB
-* Postgres
-* MySQL
-  - MySQL Workbench (IDE for working with MySQL)
+### MongoDB
 
-To avoid a pesky error "Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock" start mysql as a server with `$ brew services start mysql` and just run `$ mysql -uroot` and you can run without a password. I find developing it is easier to just use no password, enter an empty string as a password for connecting to mysql
+- If you get this error🔛
+
+![mongo connection error](https://i.imgur.com/Mf7TIea.png)
+
+- Just run `$ brew services start mongodb-community` to start mongodb as a service
+
+### Postgres
+
+### MySQL
+
+- MySQL Workbench (IDE for working with MySQL)
+- To avoid a pesky error "Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock" start mysql as a server with `$ brew services start mysql` and just run `$ mysql -uroot` and you can run without a password. I find developing it is easier to just use no password, enter an empty string as a password for connecting to mysql
 
 ## Tools
 
