@@ -65,7 +65,7 @@ cask 'sublime-text'
 # cask 'visual-studio-code'
 # I use vscodium because I like using neovim - if you are not, comment out this line and comment in the previous line
 # note: If you had visual-studio-code installed you need to uninstall it with `$ brew uninstall visual-studio-code`
-
+cask 'mongodb-compass'
 cask 'vscodium'
 cask 'slack'
 cask 'mac2imgur'

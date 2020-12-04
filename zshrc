@@ -88,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.functions
 
+# vi-escape delays - https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 export KEYTIMEOUT=1
 
 # VI Mode

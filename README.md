@@ -594,3 +594,8 @@ Please add "export FZF_BASE=/path/to/fzf/install/dir" to your .zshrc
 - All the other casks are inside the [Casks folder](https://github.com/Homebrew/homebrew-cask-fonts/tree/master/Casks)
 - That's it. You will now see icons inside Alacritty
 - **note** [Fira Code is a very cool concept](https://github.com/tonsky/FiraCode)
+
+### Manual installs
+
+- live-server
+  - I use this a lot so install globally with `$ npm i live-server -g`
