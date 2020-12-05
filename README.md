@@ -441,6 +441,24 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 
 - This spruces up our Sublime Text settings and makes you feel like you coding on a spaceship (thanks to Seti_UI)
 
+##### Troubleshooting Sublime Text Vintage mode
+
+- There are other Vim setups for ST3 - I am happy with Vintage mode
+- But sometimes it breaks and deleting in vim, got to the end of the line, takes forever. If this happens reset ST3
+- When ST3 "breaks" (every now and then) it takes me a couple hours to fix it
+  - The key bindings are messed up, I have to type `d` 3 times to delete a line, appending adds an `a` at the end, it just becomes a terrible user experience and you need a fresh install of ST3 to get it back to work properly
+- Do this the next time this happens
+- https://www.sublimetext.com/docs/3/revert.html
+
+OS X: ~/Library/Application Support/Sublime Text 3
+
+Grab everything and put in a backup folder on your desktop (just grab all the stuff in that folder and put it
+somewhere safe in case you need it). We are just going to repopulate ST3 like we did before and vintage should
+work as we expect (if all is good you can blow up your backup settings unless there was custom work you want to retain like packages and bindings)s
+Go to [my dot files](https://github.com/kingluddite/dotfiles)
+
+- Go into your dotfiles locally (like you did before) and and follow the three "cp -R instructions" above to get ST3 and vintange working well again
+
 ## Vim Stuff
 
 - Vim is a super awesome text editor that has a huge learning curve but well worth the time to learn it
