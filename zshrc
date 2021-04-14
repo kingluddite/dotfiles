@@ -75,6 +75,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # MAMP and MYSQL
 # export PATH="/Applications/MAMP/Library/bin:$PATH"
 
+# add my local scripts
+export PATH=$HOME/bin:$PATH
+
 # add mysql to zshrc
 export PATH=/usr/local/mysql/bin:$PATH
 
@@ -141,7 +144,9 @@ else
     }
 fi
 
-# autoload -Uz compinit
+autoload -Uz compinit
+# case insensitive path-completion 
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
 # typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
 # if [ $(date +'%j') != $updated_at ]; then
 #   compinit -i

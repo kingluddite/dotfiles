@@ -7,6 +7,11 @@ eslint-boilerplate(){
   git clone https://github.com/kingluddite/eslint-boilerplate.git . && npm i
 }
 
+
+css-boilerplate(){
+  git clone https://github.com/kingluddite/my-css-boilerplate.git . && npm i
+}
+
 function cdl { cd $1; ls;}
 
 # Install `tree` first — brew install tree
