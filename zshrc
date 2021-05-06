@@ -104,7 +104,6 @@ export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
 # Makes green/red highlighting work
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -114,3 +113,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
