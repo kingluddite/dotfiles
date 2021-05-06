@@ -41,7 +41,7 @@ export PATH=$HOME/bin:$PATH
 # add mysql to zshrc
 export PATH=/usr/local/mysql/bin:$PATH
 
-plugins=(vi-mode)
+plugins=(vi-mode zsh-autosuggestions fzf)
 
 # z - frecent (track where you last were)
 . $HOME/z.sh
@@ -74,6 +74,7 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 bindkey '`'  autosuggest-accept # If you want to accept and type out all of what autosuggest suggests just type `
+
 
 prompt_dir() {
     prompt_segment blue black "%$(( $COLUMNS - 61 ))<...<%3~%<<"

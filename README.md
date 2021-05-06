@@ -301,6 +301,26 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 
 `$ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh`
 
+- you may get this annoying error2⃣
+
+```
+zsh-syntax-highlighting: unhandled ZLE widget 'autosuggest-accept'
+zsh-syntax-highlighting: (This is sometimes caused by doing `bindkey <keys> autosuggest-accept` without creating the 'autosuggest-accept' widget with `zle -N` or `zle -C`.)
+```
+
+```
+
+* This fix is to make sure you have autosuggest in plugin like this2⃣
+
+
+`.zshrc`
+
+```
+
+plugins=(vi-mode zsh-autosuggestions fzf)
+
+```
+
 #### Testing if aliases are working
 
 - Try out two of my aliases to see if it is working
@@ -569,8 +589,10 @@ Go to [my dot files](https://github.com/kingluddite/dotfiles)
 - If you get this error
 
 ```
+
 [oh-my-zsh] fzf plugin: Cannot find fzf installation directory.
 Please add "export FZF_BASE=/path/to/fzf/install/dir" to your .zshrc
+
 ```
 
 - Use your Rosetta terminal to install `fzf` with Homebrew
@@ -625,3 +647,4 @@ Please add "export FZF_BASE=/path/to/fzf/install/dir" to your .zshrc
 
 - live-server
   - I use this a lot so install globally with `$ npm i live-server -g`
+```
