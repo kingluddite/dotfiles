@@ -22,7 +22,6 @@ ZSH_THEME="cobalt2"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(sudo alias-tips zsh-autosuggestions osx zsh-syntax-highlighting)
 # plugins=(sudo alias-tips osx zsh-syntax-highlighting)
-# plugins=(zsh-zsh-autosuggestions)
 
 # --- Customize it!
 # Would you like to use another custom folder than $ZSH/custom?
@@ -74,6 +73,7 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
+bindkey '`'  autosuggest-accept # If you want to accept and type out all of what autosuggest suggests just type `
 
 prompt_dir() {
     prompt_segment blue black "%$(( $COLUMNS - 61 ))<...<%3~%<<"
