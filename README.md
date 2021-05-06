@@ -293,6 +293,21 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 
 - Or you could also use the `$ zfrash` alias
 
+#### Installing autosuggest
+
+`$ brew install zsh-autosuggestions` (this is in homebrew bundle and should be installed)
+
+- But you also need to add it to your .zshrc by adding this line2⃣
+
+`$ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh`
+
+- The above method is preferred because on M1 homebrew's default folder is in a different location so the above creates this path in your zshrc2⃣
+
+`source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
+
+- Or it will point to the other default path if you are not on a M1
+- The homebrew install script installs Homebrew to its preferred prefix (/usr/local for macOS Intel, /opt/homebrew for Apple Silicon) so that you don’t need sudo when you brew install
+
 #### Testing if aliases are working
 
 - Try out two of my aliases to see if it is working
