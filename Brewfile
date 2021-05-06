@@ -35,8 +35,8 @@ brew 'grep'
 brew 'fzf'
 brew 'ripgrep'
 brew 'neofetch'
-brew 'hub'
-cask 'gh'
+# brew 'hub'
+# cask 'gh' Doesn't work?
 brew 'tree'
 brew 'rename'
 brew 'node'
@@ -54,8 +54,8 @@ brew 'zsh'
 # databases
 brew 'mongodb/brew/mongodb-community'
 brew 'mysql'
-brew 'sqllite'
-brew 'postgress'
+brew 'sqlite'
+brew 'postgresql'
 
 # Apps
 cask 'alfred'
@@ -67,7 +67,7 @@ cask 'sublime-text'
 # I use vscodium because I like using neovim - if you are not, comment out this line and comment in the previous line
 # note: If you had visual-studio-code installed you need to uninstall it with `$ brew uninstall visual-studio-code`
 cask 'mongodb-compass'
-cask 'vscodium'
+# cask 'vscodium'
 cask 'slack'
 cask 'mac2imgur'
 # cask 'Caskroom/cask/karabiner-elements'

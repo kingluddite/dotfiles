@@ -7,10 +7,51 @@ eslint-boilerplate(){
   git clone https://github.com/kingluddite/eslint-boilerplate.git . && npm i
 }
 
+css-boilerplate() {
+  # Clone just the repository's .git folder (excluding files as they are already in
+  # `existing-dir`) into an empty temporary directory 
+  git clone --no-checkout https://github.com/kingluddite/my-css-boilerplate.git existing-dir/existing-dir.tmp;
 
-css-boilerplate(){
-  git clone https://github.com/kingluddite/my-css-boilerplate.git . && npm i
+  # note: this would be simple and we could stop here if we cloned into an empty folder
+  #   all the following steps are necessary if we clone into a folder with existing files
+  #   we can't (by default) clone into a file with existing files 
+  #   most of the time we'll want to add our boilerplate to an existing repo
+  #   so we need to add all of the following steps to clone a git repo into a folder with existing files
+
+  # Move the .git folder to the directory with the files.
+  # This makes `existing-dir` a git repo.
+  mv existing-dir/existing-dir.tmp/.git existing-dir/;
+  
+  # Delete the temporary directory and change into existing-dir
+  rmdir existing-dir/existing-dir.tmp;
+  cd existing-dir
+
+  # git thinks all files are deleted, this reverts the state of the repo to HEAD.
+  # WARNING: any local changes to the files will be lost.
+  git reset --hard HEAD;
+  
+  # blow up the .git folder
+  rm -rf .git;
+  
+  # move everything all normal files and folders into the parent folder (root of app you are cloning into)
+  mv * ../;
+
+  # And you also want to move all hidden files (if you don't do this step, no hidden files will be moved)
+  mv .* ../;
+  
+  # change into the parent directory (root of app you are cloning into)
+  cd ..
+
+  # remove the folder you temporarily created to make this possible
+  rm -rf existing-dir;
+
+  # install all dependencies
+  npm i;
 }
+
+# css-boilerplate(){
+#   git clone https://github.com/kingluddite/my-css-boilerplate.git . && npm i
+# }
 
 function cdl { cd $1; ls;}
 

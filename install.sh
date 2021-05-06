@@ -35,11 +35,11 @@ chsh -s $(which zsh)
 # $HOME/.composer/vendor/bin/valet install
 
 # Install global NPM packages
-npm install --global yarn gulp eslint prettier # might add (now)
+# npm install --global yarn gulp eslint prettier # might add (now)
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
-mkdir $HOME/Sites
+# mkdir $HOME/Sites
 
 # Remove Last Login Message from Terminal
 touch ~/.hushlogin
@@ -49,4 +49,4 @@ touch ~/.hushlogin
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
-source .macos
+# source .macos
