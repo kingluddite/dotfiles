@@ -487,6 +487,10 @@ Go to [my dot files](https://github.com/kingluddite/dotfiles)
 
 - Go into your dotfiles locally (like you did before) and and follow the three "cp -R instructions" above to get ST3 and vintange working well again
 
+#### Sublime License
+* Sublime is free but will remind you with popup often
+* Buy a license and get rid of popup
+* At times you'll need to reinstall Sublime Text and every time you'll need that License you recieved via email. You'll need to search for it and it's title is something like "Sublime Text License Key". Click Enter Registration inside Sublime and copy and paste that license.
 ## Vim Stuff
 
 - Vim is a super awesome text editor that has a huge learning curve but well worth the time to learn it
