@@ -9,6 +9,9 @@ export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 export FZF_BASE="$HOME/.fzf"
 ZSH_THEME="cobalt2"
 
+# nvim is my default editor
+export EDITOR=nvim
+
 # Android stuff
 # export ANDROID_HOME=$HOME/Library/Android/sdk
 # export PATH=$PATH:$ANDROID_HOME/tools
@@ -115,3 +118,5 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
