@@ -6,10 +6,13 @@
 # use NeoVim instead of vim
 alias vim'nvim' >> ~/.zshrc
 # alias vim=nvim
-alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
+# alias story='cd ~/Documents/dev/gatsby-stuff/storeytime-gatsby'
 alias ics='cd ~/Documents/dev/ics/ics-gatsby-forty'
 alias mysite='cd ~/Documents/dev/gatsby-stuff/reactsensei.com'
-alias vlad='cd ~/Documents/dev/gatsby-stuff/cgi-vlad'
+
+# x86 homebrew
+# ref - https://diewland.medium.com/how-to-install-python-3-7-on-macbook-m1-87c5b0fcb3b5
+alias ibrew="arch -x86_64 /usr/local/bin/brew"
 
 # make tmux work with alacritty
 export TERM=xterm-256color

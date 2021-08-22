@@ -2,7 +2,6 @@
 # uncomment this to test zsh speed
 # Path to your oh-my-zsh installation.
 #timer=$(($(gdate +%s%N)/1000000))
-export PATH=/opt/homebrew/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
@@ -31,7 +30,7 @@ export EDITOR=nvim
 # echo $ZSH_CUSTOM (shows where it is)
 # ZSH_CUSTOM=$HOME/dotfiles/custom/themes/
 
-export PATH=/opt/homebrew/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/opt/mongodb-community@4.0/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/homebrew/bin:/usr/local/opt/mongodb-community@4.0/bin
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -108,15 +107,18 @@ export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
 # Makes green/red highlighting work
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="$PATH:/usr/local/opt/grep/libexec/gnubin"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Update 2021 - eval "$(pyenv init -)" no longer sets path
+# Use below with --path instead
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-
+  eval "$(pyenv init --path)"
 fi
+
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:$PATH"
+export PATH="$PATH:/opt/homebrew/opt/openjdk/bin"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
