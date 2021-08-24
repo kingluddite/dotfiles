@@ -43,7 +43,7 @@ export PATH=$HOME/bin:$PATH
 # add mysql to zshrc
 export PATH=/usr/local/mysql/bin:$PATH
 
-plugins=(vi-mode zsh-autosuggestions fzf)
+plugins=(vi-mode zsh-autosuggestions fzf alias-tips)
 
 # z - frecent (track where you last were)
 . $HOME/z.sh
