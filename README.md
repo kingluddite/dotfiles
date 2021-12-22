@@ -308,17 +308,16 @@ zsh-syntax-highlighting: unhandled ZLE widget 'autosuggest-accept'
 zsh-syntax-highlighting: (This is sometimes caused by doing `bindkey <keys> autosuggest-accept` without creating the 'autosuggest-accept' widget with `zle -N` or `zle -C`.)
 ```
 
-```
+
 
 * This fix is to make sure you have autosuggest in plugin like this2⃣
 
-
+```
 `.zshrc`
 
-```
+
 
 plugins=(vi-mode zsh-autosuggestions fzf)
-
 ```
 
 #### Testing if aliases are working
