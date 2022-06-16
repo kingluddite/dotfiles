@@ -321,6 +321,12 @@ plugins=(vi-mode zsh-autosuggestions fzf)
 
 ```
 
+and install zsh-autosuggestions
+
+`$ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions`
+
+
+
 #### Testing if aliases are working
 
 - Try out two of my aliases to see if it is working
