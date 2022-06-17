@@ -679,3 +679,13 @@ fix by installing
 remap your caps lock key to esc
 ![remapping caps lock key to esc key](https://i.imgur.com/Etky34T.png)
 
+## change irish keyboard +- key to us tilde back tic
+* use karibiner
+![update key](https://i.imgur.com/eiOuyoz.png)
+
+## change british keyboards £ to #
+go to this site - https://ke-complex-modifications.pqrs.org/
+find this - https://i.imgur.com/IfhXzfs.png
+click import
+open karibiner elements, accect import and enable and now when you type left shift + 3 you will have a hash instead of a €
+
