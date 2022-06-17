@@ -675,3 +675,7 @@ fix by installing
 
 `$ pip install pynvim`
 
+## Karibiner Elements
+remap your caps lock key to esc
+![remapping caps lock key to esc key](https://i.imgur.com/Etky34T.png)
+
