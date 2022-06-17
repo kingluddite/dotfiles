@@ -658,3 +658,20 @@ Please add "export FZF_BASE=/path/to/fzf/install/dir" to your .zshrc
 - live-server
   - I use this a lot so install globally with `$ npm i live-server -g`
 ```
+## coc error pyx 
+install python3 with brew check that it is installed python3 --version
+install pip
+Download pip by running the following command:
+
+`$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
+
+Install the downloaded package by running:
+`$ python3 get-pip.py`
+
+and this error
+[coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
+
+fix by installing
+
+`$ pip install pynvim`
+
